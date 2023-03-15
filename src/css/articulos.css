@@ -546,6 +546,88 @@ main img {
     color: var(--marron);
 }
 
+/*MAIN POLITICAS*/
+
+.main__politicas {
+
+    background-color: var(--blanco);
+}
+
+.body__articulo--politicas {
+
+    background-color: var(--blanco-perla);
+}
+
+.header__articulo--politicas {
+
+    position: relative;
+}
+
+.titulo__articulo--politicas {
+
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    padding: 1.4em 2em;
+    text-align: center;
+    margin: 2.5em 0 0 0;
+}
+
+#h2Politic {
+
+    font-size: 1.6em;
+}
+
+ul {
+
+    padding-left: 1em;
+}
+
+ul li {
+
+    color: var(--bronce);
+    line-height: 1.4em;
+}
+
+.lista__tratam, .lista__datos {
+
+    padding: 0;
+}
+
+.lista__tratam li {
+
+    list-style: none;
+    color: var(--gris-oscuro);
+}
+
+.lista__tratam li::before {
+
+    content: "=";
+    position: relative;
+    top: 0.1em;
+    color: var(--marron);
+    font-size: 1.6em;
+    margin-right: 0.3em;
+}
+
+.lista__datos li{ 
+
+    list-style: none;
+    color: var(--gris-oscuro);
+}
+
+.lista__datos li span {
+
+    color: var(--marron);
+    font-weight: 600;
+}
+
+.lista__datos li a {
+
+    text-decoration: none;
+    color: var(--gris-oscuro);
+}
+
 /*FOOTER*/
 
 footer {
@@ -952,6 +1034,25 @@ footer {
         padding: 2.4em 2.7em 1.9em 2.7em;
     }
 
+    /*MAIN POLITICAS*/
+
+    .titulo__articulo--politicas {
+
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        max-width: none;
+        padding: 1.4em 0 0.4em 2em;
+        text-align: right;
+        margin: 3.8em 0 0 0;
+    }
+
+    #h2Politic {
+
+        font-size: 2em;
+    }
+
     /*FOOTER*/
 
     footer {
@@ -1099,8 +1200,13 @@ footer {
     }
 
     .cambio__idioma::after {
-        
+
         right: 13em;
+    }
+
+    #h2Politic {
+
+        font-size: 2.2em;
     }
     
     .footer__datos {
