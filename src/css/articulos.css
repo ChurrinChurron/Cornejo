@@ -38,11 +38,9 @@
 
 body {
 
-    max-width: 1400px;
     position: relative;
     margin: 0 auto;
     font-family: var(--inter);
-    background-color: var(--marron-oscuro);
 }
 
 .links__desktop, .links__areas--mobile.cerrar {
@@ -74,7 +72,6 @@ header {
     position: fixed;
     z-index: 1;
     width: 100%;
-    max-width: 1400px;
     background-color: var(--negro);
     color: var(--blanco);
 }
@@ -1074,6 +1071,38 @@ footer {
 
 @media screen and (min-width: 1200px) {
 
+    header {
+
+        padding: 0 6em;
+    }
+
+    .fullMenu {
+
+        right: 20.6em;
+    }
+
+    .fullMenu::after {
+
+        border-left: 3em solid transparent;
+    }
+
+    .fullMenu--close::after {
+
+        right: -0.035em;
+        border-left: 3.2em solid transparent;
+        border-right: 3.2em solid transparent;
+    }
+
+    .idioma__opciones {
+
+        right: 6.4em;
+    }
+
+    .cambio__idioma::after {
+        
+        right: 13em;
+    }
+    
     .footer__datos {
 
         margin-right: 9em;
@@ -1104,4 +1133,23 @@ footer {
         font-size: 2em;
     }
 
+}
+
+@media screen and (min-width: 1400px) {
+
+    .otros__articulo h3 {
+
+        margin: 2em 0 1.4em 12%;
+    }
+
+    .articulos__relac article {
+        
+        margin: 0.9em 1.6em;
+        width: 23.5em;
+    }
+
+    .footer__politicas {
+
+        margin-right: 7em;
+    }
 }
