@@ -316,116 +316,53 @@ nav {
     font-size: 0.8em;
 }
 
-/*MAIN ARTICULO*/
+/*GRACIAS*/
 
 main {
 
     padding-top: 3em;
-    background-color: var(--blanco-perla);
 }
 
-main img {
+.agradec {
 
-    width: 100%;
+    padding: 6em 1.6em;
 }
 
-.header__articulo {
+.agradec h2 {
 
-    position: relative;
-}
-
-.titulo__articulo {
-
-    position: relative;
-    bottom: 2em;
-    width: 85%;
-    max-width: 34em;
-    padding: 1.4em 2em;
-    margin: 0 auto;
-    background-color: var(--blanco);
-    border-bottom: 7px solid var(--bronce);
-}
-
-.titulo__articulo time {
-    
-    font-size: 0.8em;
-    font-weight: 600;
-    color: var(--bronce);
-}
-
-.titulo__articulo h2 {
-
-    margin-top: 0.8em;
-    font-size: 1.4em;
-}
-
-.volverBlog__desktop {
-
-    text-decoration: none;
-    color: var(--bronce-claro);
-    display: none;
-}
-
-.volverBlog__desktop i {
-
-    position: relative;
-    bottom: 0.2em;
-}
-
-.body__articulo {
-
-    padding: 0.6em 1.4em;
-    color: var(--gris-oscuro);
-}
-
-.body__articulo #resolucionSub {
-
-    text-decoration: underline;
     text-align: center;
-    margin-bottom: 1em;
-    font-size: 0.950em;
+    font-size: 2em;
+    font-family: var(--antiqua);
 }
 
-.body__articulo p {
+#titInter{
 
-    line-height: 1.4em;
+    font-family: var(--inter);
+    font-weight: 300;
+    font-size: 0.750em;
+    position: relative;
 }
 
-.body__articulo h3 {
+#titInter::after {
 
-    color: var(--marron);
+    content: "";
+    position: absolute;
+    width: 11em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.7em;
+    right: 0.050em;
 }
 
-.body__articulo img {
+.agradec p {
 
-    margin: 1.4em 0;
-}
-
-.refer__articulo {
-
-    margin-top: 1.7em;
-    background-color: var(--bronce-op-10);
-    border-top: 4px solid var(--bronce-claro); 
-}
-
-.refer__articulo p {
-
-    font-size: 0.850em;
-    padding: 0.5em 0.8em;
-}
-
-.refer__link {
-
-    display: block;
-    padding: 1em;
-    background-color: var(--blanco);
-    text-decoration: none;
+    text-align: center;
+    font-size: 1.050em;
+    line-height: 1.5em;
     color: var(--gris);
-    font-size: 0.8em;
-    word-break: break-word;
 }
 
-.link__volverBlog {
+.link__inicio {
 
     display: block;
     position: relative;
@@ -440,7 +377,7 @@ main img {
     transition: .3s;
 }
 
-.link__volverBlog:hover {
+.link__inicio:hover {
 
     border: 2px solid var(--marron);
     padding-left: 2.6em;
@@ -449,7 +386,7 @@ main img {
     color: var(--marron);
 }
 
-.link__volverBlog::before {
+.link__inicio::before {
 
     content: "🡐";
     position: absolute;
@@ -460,172 +397,55 @@ main img {
     color: var(--marron);
 }
 
-.link__volverBlog:hover::before {
+.link__inicio:hover::before {
 
     display: inline-block;
 }
 
-.otros__articulo {
+.links {
 
-    margin-top: 4.5em;
-    background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
+    background: url(../../assets/gracias-fondo.webp) no-repeat;
     background-size: cover;
-    padding: 4em 2em 2.7em 2em;
+    padding: 6em 1.6em;
 }
 
-.otros__articulo h3 {
+.links p {
 
-    text-align: center;
-    width: 4.2em;
-    margin: 0 auto 2em auto;
-    font-size: 1.8em;
-    padding-bottom: 0.6em;
     color: var(--blanco);
-    font-weight: 400;
-    font-family: var(--antiqua);
-    border-bottom: 1px solid var(--gris-claro);
-}
-
-.otros__articulo h3 span {
-
-    font-family: var(--inter);
-    font-weight: 600;
-}
-
-.articulos__relac {
-
-    display: flex;
-    flex-direction: column;
-}
-
-.articulos__relac article {
-
-    position: relative;
-    margin: 0.9em auto;
-    max-width: 24em;
-    height: 17em;
-    padding: 2.2em 2.6em 1.9em 2.6em;
-    background-color: var(--blanco);
-}
-
-.articulos__relac article time {
-
-    font-size: 0.750em;
-    font-weight: 600;
-    color: var(--bronce);
-}
-
-.articulos__relac article h4 {
-
-    margin-top: 0.6em;
-    font-weight: 600;
-}
-
-.articulos__relac article a {
-
-    position: absolute;
-    bottom: 1em;
-    text-decoration: none;
-    background-color: var(--marron);
-    border: 2px solid transparent;
-    padding: 0.5em 1.4em;
-    color: var(--blanco);
-    transition: .3s;
-}
-
-.articulos__relac article a span {
-
-    margin-left: 0.4em;
-}
-
-.articulos__relac article a:hover {
-
-    padding-left: 1.8em;
-    border: 2px solid var(--marron);
-    background-color: var(--blanco);
-    color: var(--marron);
-}
-
-/*MAIN POLITICAS*/
-
-.main__politicas {
-
-    background-color: var(--blanco);
-}
-
-.body__articulo--politicas {
-
-    background-color: var(--blanco-perla);
-}
-
-.header__articulo--politicas {
-
-    position: relative;
-}
-
-.titulo__articulo--politicas {
-
-    bottom: 0;
-    width: 100%;
-    max-width: none;
-    padding: 1.4em 2em;
     text-align: center;
-    margin: 2.5em 0 0 0;
+    font-size: 1.050em;
+    line-height: 1.5em;
 }
 
-#h2Politic {
+.links__iconos {
 
-    font-size: 1.6em;
+    display: grid;
+    grid-template-columns: repeat(3, 2.6em);
+    justify-content: center;
+    text-align: center;
+    margin-top: 3em;
+    gap: 2.2em;
 }
 
-ul {
+.links__iconos a {
 
-    padding-left: 1em;
+    font-size: 2.2em;
+    border: 1px solid var(--blanco);
+    padding: 0em 0.640em;
+    color: var(--blanco);
+    border-radius: 50%;
+    text-align: center;
 }
 
-ul li {
+.links__iconos a i {
 
-    color: var(--bronce);
-    line-height: 1.4em;
+    font-size: 0.8em;
+    margin: 0 0 0.230em -0.450em;
 }
 
-.lista__tratam, .lista__datos {
+.links__iconos a:first-child i {
 
-    padding: 0;
-}
-
-.lista__tratam li {
-
-    list-style: none;
-    color: var(--gris-oscuro);
-}
-
-.lista__tratam li::before {
-
-    content: "=";
-    position: relative;
-    top: 0.1em;
-    color: var(--marron);
-    font-size: 1.6em;
-    margin-right: 0.3em;
-}
-
-.lista__datos li{ 
-
-    list-style: none;
-    color: var(--gris-oscuro);
-}
-
-.lista__datos li span {
-
-    color: var(--marron);
-    font-weight: 600;
-}
-
-.lista__datos li a {
-
-    text-decoration: none;
-    color: var(--gris-oscuro);
+    margin: 0 0 0.230em -0.350em;
 }
 
 /*FOOTER*/
@@ -933,124 +753,85 @@ footer {
         gap: 0 1.2em;
     }
 
-    /*MAIN ARTICULO*/
+    /*GRACIAS*/
 
     main {
 
-        padding-top: 4.6em;
+        padding-top: 3.8em;
+        display: flex;
     }
-
-    .header__articulo img {
-
-        width: 65%;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .titulo__articulo {
-
-        position: absolute;
-        bottom: 4em;
-        left: 0;
-        width: 48em;
-        max-width: none;
-        padding: 1.6em 2em 1.6em 10.8em;
-    }
-
-    .titulo__articulo time {
-        
-        font-size: 0.9em;
-    }
-
-    .titulo__articulo h2 {
-
-        margin-top: 0.5em;
-        font-size: 1.7em;
-    }
-
-    .volverBlog__desktop {
-
-        display: inline-block;
-        position: relative;
-        bottom: 23em;
-        font-size: 0.9em;
-        left: 5em;
-    }
-
-    .body__articulo {
-
-        padding: 2em 1.4em;
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .refer__articulo {
-
-        background-color: var(--bronce-op-10);
-        border-top: 4px solid var(--bronce-claro);
-    }
-
-    .refer__articulo p {
-
-        font-size: 0.9em;
-    }
-
-    .refer__link {
-
-        font-size: 0.940em;
-    }
-
-    .link__volverBlog {
-
-        margin: 3.2em auto 0 auto;
-    }
-
-    .otros__articulo {
-
-        margin-top: 3.8em;
-        background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
-        background-size: cover;
-        padding: 4em 2.4em 4.6em 2.4em;
-    }
-
-    .otros__articulo h3 {
-
-        text-align: left;
-        margin: 2em 0 1.4em 4%;
-        font-size: 1.850em;
-    }
-
-    .articulos__relac {
-
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .articulos__relac article {
-
-        margin: 0.9em 1em;
-        width: 22em;
-        height: 18em;
-        padding: 2.4em 2.7em 1.9em 2.7em;
-    }
-
-    /*MAIN POLITICAS*/
-
-    .titulo__articulo--politicas {
-
-        position: relative;
-        bottom: 0;
-        left: 0;
+    
+    .agradec {
+    
+        padding: 13em 5.6em;
         width: 50%;
-        max-width: none;
-        padding: 1.4em 0 0.4em 2em;
-        text-align: right;
-        margin: 3.8em 0 0 0;
+    }
+    
+    .agradec h2 {
+    
+        text-align: left;
+        font-size: 2.2em;
     }
 
-    #h2Politic {
-
-        font-size: 2em;
+    #titInter::after {
+    
+        width: 9em;
+        right: 2.05em;
+    }
+    
+    .agradec p {
+    
+        text-align: left;
+        font-size: 1.1em;
+    }
+    
+    .link__inicio {
+    
+        margin: 2.6em 0;
+    }
+    
+    .links {
+    
+        background: url(../../assets/gracias-fondo.webp) no-repeat;
+        background-size: cover;
+        padding: 17em 1.6em 10em 1.6em;
+        width: 50%;
+    }
+    
+    .links p {
+    
+        width: 14em;
+        margin: 0 auto;
+        font-size: 1.1em;
+        line-height: 1.6em;
+    }
+    
+    .links__iconos {
+    
+        grid-template-columns: repeat(6, 2.6em);
+        margin-top: 2em;
+        gap: 2em;
+    }
+    
+    .links__iconos a {
+    
+        font-size: 2.2em;
+        border: 1px solid var(--blanco);
+        padding: 0em 0.640em;
+        color: var(--blanco);
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .links__iconos a i {
+    
+        font-size: 0.8em;
+        margin: 0 0 0.230em -0.450em;
+    }
+    
+    .links__iconos a:first-child i {
+    
+        margin: 0 0 0.230em -0.350em;
     }
 
     /*FOOTER*/
@@ -1204,11 +985,6 @@ footer {
         right: 13em;
     }
 
-    #h2Politic {
-
-        font-size: 2.2em;
-    }
-    
     .footer__datos {
 
         margin-right: 9em;
@@ -1243,15 +1019,14 @@ footer {
 
 @media screen and (min-width: 1400px) {
 
-    .otros__articulo h3 {
-
-        margin: 2em 0 1.4em 7.5%;
+    .agradec {
+    
+        padding: 13em 7.6em;
     }
-
-    .articulos__relac article {
-        
-        margin: 0.9em 1.6em;
-        width: 23.5em;
+    
+    .agradec h2 {
+    
+        font-size: 2.7em;
     }
 
     .footer__politicas {
