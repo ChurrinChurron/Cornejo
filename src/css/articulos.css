@@ -1245,7 +1245,11 @@ footer {
 
     .otros__articulo h3 {
 
+<<<<<<< HEAD
         margin: 2em 0 1.4em 7.5%;
+=======
+        margin: 2em 0 1.4em 12%;
+>>>>>>> bcb0443507231f8b1bdae2a76e8044968c1d541b
     }
 
     .articulos__relac article {
@@ -1258,4 +1262,8 @@ footer {
 
         margin-right: 7em;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> bcb0443507231f8b1bdae2a76e8044968c1d541b
