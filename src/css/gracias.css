@@ -30,7 +30,6 @@
     --bronce-claro: #DCB57C;
     --bronce: #B7935E;
     --bronce-op-10: rgba(183, 147, 94, 0.160);
-    --bronce-op-30: rgba(183, 147, 94, 0.3);
     --marron: #9F7044;
     --marron-oscuro: #3E2D1C;
     --verde: #54BE3A;
@@ -317,337 +316,136 @@ nav {
     font-size: 0.8em;
 }
 
-/*MAIN HEADER*/
+/*GRACIAS*/
 
-.header__conten {
+main {
 
-    padding: 3em 0 6em 0;
+    padding-top: 3em;
 }
 
-.header__fondo {
+.agradec {
 
-    background: url(../../assets/partners-fondo.webp) no-repeat;
-    background-size: cover;
-    background-position: right;
-    height: 22em;
+    padding: 6em 1.6em;
+}
+
+.agradec h2 {
+
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--antiqua);
+}
+
+#titInter{
+
+    font-family: var(--inter);
+    font-weight: 300;
+    font-size: 0.750em;
     position: relative;
 }
 
-.header__fondo--contacto {
+#titInter::after {
 
-    background: url(../../assets/contacto-fondo.webp) no-repeat;
-    background-size: cover;
-    background-position: right;
-}
-
-.header__conten h2 {
-
+    content: "";
     position: absolute;
-    bottom: 1.6em;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-bottom: 0.5em;
+    width: 11em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.7em;
+    right: 0.050em;
+}
+
+.agradec p {
+
     text-align: center;
-    font-size: 2.3em;
-    color: var(--blanco);
-    border-bottom: 1px solid var(--blanco);;
-}
-
-.header__conten h2 span {
-
-    font-family: var(--antiqua);
-    font-weight: 500;
-}
-
-.header__conten h2::after {
-
-    content: "|";
-    font-weight: 300;
-    font-size: 1.320em;
-    position: absolute;
-    bottom: -1.230em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.header__refran {
-
-    padding: 2em;
-    background-color: var(--bronce-op-30);
-    text-align: center;
-    color: var(--marron);
-}
-
-.header__refran h3 {
-
-    font-weight: 300;
-}
-
-.header__refran h3 span {
-
-    font-family: var(--antiqua);
-    font-weight: 700;
-    font-size: 1.1em;
-}
-
-/*PARTNERS - ALIANZAS*/
-
-.alianzas{
-
-    padding: 0 1.6em;
-    text-align: center;
-}
-
-.alianzas h2 {
-
-    font-size: 1.9em;
-    font-weight: 600;
-}
-
-.alianzas h2 span{
-
-    font-family: var(--antiqua);
     font-size: 1.050em;
-    font-weight: 300;
-    position: relative;
-}
-
-.alianzas h2 span::after {
-
-    content: "";
-    position: absolute;
-    width: 5em;
-    height: 0.030em;
-    background-color: var(--gris);
-    top: 1.7em;
-    right: 0.050em;
-}
-
-.alianzas__conten {
-
-    margin: 7em 0;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 4em 0;
-}
-
-.alianzas__partner h3 {
-
-    margin-bottom: 0.4em;
-    color: var(--gris-oscuro);
-}
-
-.partner__caja {
-
-    width: 70%;
-    max-width: 16em;
-    height: 9.4em;
-    margin: 0 auto 2em auto;
-    background-color: var(--gris-claro);
-}
-
-/*PARTNERS - FORMULARIO*/
-
-.formContac__partner {
-
-    padding: 6em 1.4em;
-    background-color: var(--bronce-claro);
-    text-align: center;
-}
-
-.formContac__partner h2 {
-
-    font-size: 1.9em;
-    font-weight: 400;
-}
-
-.formContac__partner h2 span{
-
-    font-family: var(--antiqua);
-    font-size: 1.1em;
-    font-weight: 600;
-    position: relative;
-}
-
-.formContac__partner h2 span::after {
-
-    content: "";
-    position: absolute;
-    width: 5em;
-    height: 0.030em;
-    background-color: var(--gris);
-    top: 1.7em;
-    right: 0.050em;
-}
-
-.formContac__form {
-
-    padding: 6em 1.4em;
-    max-width: 34em;
-    margin: 0 auto;
-}
-
-.formContac__form form {
-
-    padding: 2em;
-    box-shadow: 0 0 5px 2px var(--gris-claro);
-}
-
-form > p {
-
-    font-size: 0.9em;
-    text-align: center;
-    margin-bottom: 2em;
     line-height: 1.5em;
-}
-
-form input, form textarea {
-
-    width: 100%;
-    border: 1px solid var(--gris-claro);
-    outline: none;
-    padding: 0.8em 1.5em 0.8em 1em;
-    margin: 0.3em 0;
-    color: var(--gris-oscuro);
-    font-family: var(--inter);
-}
-
-form input::placeholder {
-
-    font-family: var(--inter);
-}
-
-.form__check p{
-
-    margin-top: 1em;
-    font-size: 0.8em;
-    text-align: center;
-}
-
-.form__check p span {
-
-    font-size: 0.9em;
     color: var(--gris);
-    position: relative;
-    top: 0.5em;
 }
 
-.check__conten {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.8em 0;
-}
-
-.check {
-
-    display: flex;
-}
-
-.check:first-child {
-
-    margin-right: 1em;
-}
-
-.check label {
-
-    font-size: 0.9em;
-    margin-right: 0.4em;
-}
-
-input[type="checkbox"] {
-
-    appearance: none;
-    -webkit-appearance: none;
-    width: 1.2em;
-    height: 1.2em;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid var(--bronce);
-}
-
-input[type="checkbox"]::after {
-    
-    content: "\f00c";
-    font-family: "Font Awesome 5 Free";
-    display: none;
-    font-weight: 900;
-    font-size: 1.080em;
-    color: var(--marron);
-}
-
-input[type="checkbox"]:checked:after {
+.link__inicio {
 
     display: block;
-}
-
-input[type="submit"] {
-
-    outline: none;
-    border: none;
+    position: relative;
+    width: 12em;
+    margin: 2.6em auto 0 auto;
+    padding: 0.8em 1.6em 0.8em 1.6em;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
     background-color: var(--marron);
-    border: 1px solid transparent;
     color: var(--blanco);
-    font-size: 0.9em;
     transition: .3s;
-    cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.link__inicio:hover {
 
-    border: 1px solid var(--marron);
+    border: 2px solid var(--marron);
+    padding-left: 2.6em;
+    width: 12.6em;
     background-color: transparent;
     color: var(--marron);
 }
 
-/*CONTACTO - DATOS*/
+.link__inicio::before {
 
-.formContac__conten {
-
-    padding: 0 1.4em;
-    color: var(--gris-oscuro);
+    content: "🡐";
+    position: absolute;
+    right: 8.1em;
+    bottom: 0.4em;
+    font-size: 1.3em;
+    display: none;
+    color: var(--marron);
 }
 
-.formContac__conten > img {
+.link__inicio:hover::before {
 
-    width: 100%;
-    max-width: 35em;
-    margin: 0 auto;
-    display: block;
+    display: inline-block;
 }
 
-.formContac__info {
+.links {
 
+    background: url(../../assets/gracias-fondo.webp) no-repeat;
+    background-size: cover;
+    padding: 6em 1.6em;
+}
+
+.links p {
+
+    color: var(--blanco);
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.050em;
     line-height: 1.5em;
 }
 
-.contac__datos {
+.links__iconos {
 
-    margin-bottom: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 2.6em);
+    justify-content: center;
+    text-align: center;
+    margin-top: 3em;
+    gap: 2.2em;
+}
+
+.links__iconos a {
+
+    font-size: 2.2em;
+    border: 1px solid var(--blanco);
+    padding: 0em 0.640em;
+    color: var(--blanco);
+    border-radius: 50%;
     text-align: center;
 }
 
-.contac__datos img {
+.links__iconos a i {
 
-    width: 1.8em;
-    margin-bottom: 1em;
+    font-size: 0.8em;
+    margin: 0 0 0.230em -0.450em;
 }
 
-/*CONTACTO - FORMULARIO*/
+.links__iconos a:first-child i {
 
-textarea {
-
-    min-width: 100%;
-    max-width: 100%;
-    height: 7em;
-    max-height: 11em;
+    margin: 0 0 0.230em -0.350em;
 }
 
 /*FOOTER*/
@@ -785,14 +583,6 @@ footer {
 
     text-decoration: underline;
     color: var(--gris);
-}
-
-@media screen and (min-width: 768px) {
-
-    .alianzas__conten {
-
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media screen and (min-width: 992px) {
@@ -963,221 +753,85 @@ footer {
         gap: 0 1.2em;
     }
 
-    /*MAIN HEADER*/
+    /*GRACIAS*/
 
-    .header__conten {
+    main {
 
-        padding: 3em 0 6em 0;
-    }
-
-    .header__fondo {
-
-        height: 25em;
-    }
-
-    .header__conten h2 {
-
-        bottom: 2.020em;
-        left: 5.6em;
-        transform: translateX(0);
-        font-size: 2.5em;
-        text-align: left;
-    }
-
-    .header__conten h2::after {
-
-        font-size: 1.7em;
-        bottom: -1.2em;
-    }
-
-    .header__refran {
-
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-
-    .header__refran > span {
-
-        width: 8em;
-        height: 0.040em;
-        margin-top: 0.8em;
-        background-color: var(--bronce);
-    }
-
-    .header__refran h3 {
-
-        font-weight: 300;
-        margin: 0 1em;
-    }
-
-    .header__refran h3 span {
-
-        font-family: var(--antiqua);
-        font-weight: 700;
-        font-size: 1.1em;
-    }
-
-    /*PARTNERS - ALIANZAS*/
-
-    .alianzas{
-
-        padding: 2em 1.6em;
-    }
-
-    .alianzas h2 span::after {
-
-        width: 4em;
-        right: 0.6em;
-    }
-
-    .alianzas__conten {
-
-        margin: 7em 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4em 3em;
-    }
-
-    /*PARTNERS - FORMULARIO*/
-
-    .formContac {
-
+        padding-top: 3.8em;
         display: flex;
     }
     
-    .formContac__partner {
-
-        display: grid;
-        place-items: center;
-        width: 45%;
-        padding: 0;
-        text-align: left;
+    .agradec {
+    
+        padding: 13em 5.6em;
+        width: 50%;
     }
-
-    .formContac__partner h2 {
-
+    
+    .agradec h2 {
+    
+        text-align: left;
         font-size: 2.2em;
-        font-weight: 300;
     }
 
-    .formContac__partner h2 span{
-
-        font-size: 1.7em;
-        font-weight: 600;
-    }
-
-    .formContac__partner h2 span::after {
-
-        width: 2.4em;
-        right: 2.6em;
-    }
-
-    .formContac__form {
-
-        max-width: 36em;
-    }
-
-    .formContac__form form {
-
-        padding: 3em;
-    }
-
-    form > p {
-
-        font-size: 0.960em;
-        text-align: left;
-        margin-bottom: 1.5em;
-    }
-
-    form input {
-
-        padding: 0.9em 1.5em 0.9em 1.5em;
-    }
-
-    .form__check {
-
-        display: flex;
-    }
-
-    .form__check p{
-
-        text-align: left;
-    }
-
-    .check__conten {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 0 0.7em;
-    }
-
-    .check {
-
-        display: flex;
-    }
-
-    .check:first-child {
-        
-        margin-right: 0.6em;
-    }
-
-    input[type="submit"] {
-
-        width: 22em;
-        margin: 3em auto 0 auto;
-        display: block;
-        font-size: 0.9em;
-    }
-
-    /*CONTACTO - DATOS*/
-
-    .formContac {
-
-        padding: 5em 3.8em;
+    #titInter::after {
+    
+        width: 9em;
+        right: 2.05em;
     }
     
-    .formContac__conten {
-
-        padding: 0 1.4em 0 0;
-        color: var(--gris-oscuro);
-    }
-
-    .formContac__conten > img {
-
-        width: 100%;
-        max-width: 30em;
-        margin: 2.2em auto 0 auto;
-        display: block;
-    }
-
-    .formContac__info {
-
-        text-align: left;
-        font-size: 1.2em;
-    }
-
-    .contac__datos {
-
-        margin-bottom: 1.2em;
-        flex-direction: row;
-        align-items: flex-start;
+    .agradec p {
+    
         text-align: left;
         font-size: 1.1em;
     }
-
-    .contac__datos img {
-
-        width: 1.4em;
-        margin: 0 1em 1em 0;
+    
+    .link__inicio {
+    
+        margin: 2.6em 0;
     }
-
-    /*CONTACTO - FORMULARIO*/
-
-    .formContac__form--dos {
-
-        padding: 0 0 0 1.4em;
+    
+    .links {
+    
+        background: url(../../assets/gracias-fondo.webp) no-repeat;
+        background-size: cover;
+        padding: 17em 1.6em 10em 1.6em;
+        width: 50%;
+    }
+    
+    .links p {
+    
+        width: 14em;
+        margin: 0 auto;
+        font-size: 1.1em;
+        line-height: 1.6em;
+    }
+    
+    .links__iconos {
+    
+        grid-template-columns: repeat(6, 2.6em);
+        margin-top: 2em;
+        gap: 2em;
+    }
+    
+    .links__iconos a {
+    
+        font-size: 2.2em;
+        border: 1px solid var(--blanco);
+        padding: 0em 0.640em;
+        color: var(--blanco);
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+    .links__iconos a i {
+    
+        font-size: 0.8em;
+        margin: 0 0 0.230em -0.450em;
+    }
+    
+    .links__iconos a:first-child i {
+    
+        margin: 0 0 0.230em -0.350em;
     }
 
     /*FOOTER*/
@@ -1320,7 +974,17 @@ footer {
         border-left: 3.2em solid transparent;
         border-right: 3.2em solid transparent;
     }
-    
+
+    .idioma__opciones {
+
+        right: 6.4em;
+    }
+
+    .cambio__idioma::after {
+
+        right: 13em;
+    }
+
     .footer__datos {
 
         margin-right: 9em;
@@ -1350,19 +1014,19 @@ footer {
 
         font-size: 2em;
     }
+
 }
 
 @media screen and (min-width: 1400px) {
 
-    .formContac {
-
-        padding: 5em 4em 5em 8em;
+    .agradec {
+    
+        padding: 13em 7.6em;
     }
     
-    .alianzas__conten {
-
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4em 0;
+    .agradec h2 {
+    
+        font-size: 2.7em;
     }
 
     .footer__politicas {
