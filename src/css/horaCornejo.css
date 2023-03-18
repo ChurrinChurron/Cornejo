@@ -1,0 +1,1613 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@300;400;600;700&display=swap');
+
+@font-face {
+    font-family: Antiqua;
+    src: url(../font/Book\ Antiqua\ Font.ttf);
+    }
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /*TIPOGRAFIAS*/
+
+    --inter: 'Inter', sans-serif;
+    --antiqua: 'Antiqua', sans-serif;
+    
+    /*COLORES*/
+
+    --blanco: #FFFFFF;
+    --blanco-perla: #F8F8F8;
+    --gris-claro: #D5D5D5;
+    --gris: #707070;
+    --gris-oscuro: #535353;
+    --negro: #000000;
+    --bronce-claro: #DCB57C;
+    --bronce: #B7935E;
+    --bronce-op-10: rgba(183, 147, 94, 0.160);
+    --bronce-op-30: rgba(183, 147, 94, 0.3);
+        --bronce-op-60: rgba(183, 147, 94, 0.6);
+    --marron: #9F7044;
+    --marron-oscuro: #3E2D1C;
+    --verde: #54BE3A;
+    
+}
+
+body {
+
+    position: relative;
+    margin: 0 auto;
+    font-family: var(--inter);
+}
+
+.links__desktop, .links__areas--mobile.cerrar {
+
+    display: none;
+}
+
+/*ICONO WHATSAPP*/
+
+.whatsapp {
+
+    background-color: var(--verde);
+    color: var(--blanco);
+    position: fixed;
+    bottom: 1em;
+    right: 1.1em;
+    padding: 0.2em 0.380em;
+    border-radius: 50%;
+    font-size: 2em;
+}
+
+/*HEADER*/
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+header img {
+
+    width: 4.6em;
+    padding: 0.1em 0 0.1em 0.4em;
+}
+
+nav {
+
+    display: flex;
+    align-items: center;
+}
+
+.fullMenu {
+
+    outline: none;
+    border: 0;
+    position: absolute;
+    right: 11.4em;
+    padding: 1.2em 1.2em 1em 1.2em;
+    z-index: 1;
+    height: 5em;
+    font-size: 0.6em;
+    background-color: var(--bronce);
+    color: var(--blanco);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fullMenu--close {
+
+    right: 11.4em;
+    position: fixed;
+}
+
+.fullMenu p {
+
+    margin-top: 0.8em;
+    transition: .3s;
+}
+
+.fullMenu::after {
+
+    content: "";
+    position: absolute;
+    bottom: -2.1em;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.8em solid transparent;
+    border-right: 2.8em solid transparent;
+    border-top: 21px solid var(--bronce);
+}
+
+.fullMenu--close::after {
+
+    right: -0.160em;
+    border-left: 3.1em solid transparent;
+    border-right: 3.1em solid transparent;
+}
+
+.fullMenu:hover {
+
+    padding: 2em 1.2em 1em 1.2em;
+    height: 6.5em;
+}
+
+.fullMenu p:hover {
+
+    margin-top: 1.2em;
+}
+
+.menu__linea {
+
+    width: 2.8em;
+    height: 1px;
+    margin-bottom: 0.4em;
+    background-color: var(--blanco);
+}
+
+.menu__linea--x {
+
+    width: 2em;
+    margin: 0 0 0.6em 0.8em;
+}
+
+.menu__linea--x:first-child {
+
+    transform: rotate(140deg);
+}
+
+.menu__linea--x:nth-child(2) {
+
+    transform: rotate(220deg);
+    position: relative;
+    top: -0.6em;
+}
+
+.cambio__idioma {
+
+    font-size: 0.7em;
+    color: var(--gris-claro);
+    padding: 0.8em;
+    cursor: pointer;
+}
+
+.cambio__idioma span {
+
+    color: var(--blanco);
+}
+
+.cambio__idioma i {
+
+    color: var(--bronce);
+    transition: .3s;
+}
+
+.cambio__idioma:hover i {
+
+    color: var(--blanco);
+}
+
+.cambio__idioma::after {
+
+    content: "|";
+    position: absolute;
+    right: 4.3em;
+    bottom: 0;
+    transition: .3s;
+    opacity: 0;
+}
+
+.cambio__idioma:hover::after  {
+
+    opacity: 1;
+}
+
+.idioma__opciones {
+    
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: -3.2em;
+    right: 0.4em;
+    transition: .3s;
+}
+
+.cambio__idioma:hover ~ div, .idioma__opciones:hover {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.idioma__opciones button {
+
+    border: 0;
+    outline: none;
+    background-color: var(--blanco);
+    font-family: var(--inter);
+    padding: 1.8em 1em;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+.menu__interno {
+
+    background-color: var(--bronce-claro);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: .5s;
+}
+
+.menu__interno.ocultar {
+
+    transform: translateY(-100%);
+}
+
+.menu__conten, .linksMenu__mobile, .links__areas--mobile {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__conten {
+
+    margin-top: 5em;
+    padding: 0 3em;
+    font-family: var(--antiqua);
+    color: var(--negro);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.menu__conten a {
+
+    text-decoration: none;
+    color: var(--negro);
+    margin-bottom: 0.9em;
+    border: none;
+}
+
+.menu__conten a:hover, .menu__conten span:hover, .links__redes a:hover {
+
+    color: var(--blanco);
+    border-color: var(--blanco);
+}
+
+.menu__conten span {
+
+    margin-bottom: 0.9em;
+}
+
+.links__redes {
+
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1.6em);
+    gap: 0 1.2em;
+}
+
+.links__redes a {
+
+    font-size: 1.2em;
+    border: 1px solid var(--negro);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.links__redes a i {
+
+    font-size: 0.8em;
+}
+
+/*MAIN HEADER*/
+
+.header__conten {
+
+    padding: 3em 0 6em 0;
+}
+
+.header__fondo {
+
+    background: url(../../assets/areas/civil.webp) no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 22em;
+    position: relative;
+}
+
+.header__conten h2 {
+
+    position: absolute;
+    bottom: 1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-size: 2.3em;
+    color: var(--blanco);
+    border-bottom: 1px solid var(--blanco);;
+}
+
+.header__conten h2 span {
+
+    font-family: var(--antiqua);
+    font-weight: 500;
+}
+
+.header__conten h2::after {
+
+    content: "|";
+    font-weight: 300;
+    font-size: 1.320em;
+    position: absolute;
+    bottom: -1.230em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__refran {
+
+    padding: 2em;
+    background-color: var(--bronce-op-30);
+    text-align: center;
+    color: var(--marron);
+}
+
+.header__refran h3 {
+
+    font-weight: 300;
+}
+
+.header__refran h3 span {
+
+    font-family: var(--antiqua);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/*SECCION APRENDE MAS*/
+
+.aprendeMas h2 {
+
+    padding: 0 0.6em 4em 0.6em;
+    text-align: center;
+    font-family: var(--antiqua);
+    font-size: 1.8em;
+}
+
+.aprendeMas h2 span {
+
+    position: relative;
+    font-family: var(--inter);
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+.aprendeMas h2 span::after {
+
+    content: "";
+    position: absolute;
+    width: 10em;
+    height: 0.030em;
+    background-color: var(--gris);
+    top: 2.3em;
+    right: 2.6em;
+}
+
+.aprendeMas__conten {
+
+    padding: 6em 1.4em;
+    background-color: var(--negro);
+}
+
+.conten__video {
+
+    position: relative;
+}
+
+.video__filtro {
+
+    width: 76%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bronce-op-60);
+    transition: .2s;
+}
+
+.video__filtro.play {
+
+    display: none;
+}
+
+.video__filtro::after {
+
+    content: url(../../assets/hora-cornejo/boton-play.png);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.conten__video:hover .video__filtro {
+
+    background-color: var(--bronce-op-30);
+}
+
+.conten__video img {
+
+    position: absolute;
+    width: 100.5%;
+}
+
+.conten__video video {
+
+    width: 76%;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+.conten__info {
+
+    margin-top: 6em;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.conten__info h3 {
+
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.conten__info h3 span {
+
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 400;
+}
+
+.conten__info h3 span::after, #lineaLab::after, #lineCorp::after {
+
+    content: "";
+    position: absolute;
+    width: 4em;
+    height: 0.030em;
+    background-color: var(--blanco);
+    top: 1.8em;
+    right: 0.4em;
+}
+
+#lineaLab::after {
+
+    width: 2.6em;
+    right: 0.4em;
+}
+
+#lineaCorp::after {
+
+    width: 4em;
+    right: 0.6em;
+}
+
+.conten__info p {
+
+    font-size: 0.950em;
+    line-height: 1.5em;
+}
+
+.conten__info a {
+
+    display: block;
+    position: relative;
+    width: 18em;
+    font-size: 0.9em;
+    margin: 2.6em auto 0 auto;
+    padding: 0.8em 1.6em 0.8em 1.6em;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    background-color: var(--marron);
+    color: var(--blanco);
+    transition: .3s;
+}
+
+.conten__info a:hover {
+
+    border: 2px solid var(--marron);
+    padding-right: 2.6em;
+    width: 18.6em;
+    background-color: transparent;
+    color: var(--blanco);
+}
+
+.conten__info a::before {
+
+    content: "🡒";
+    position: absolute;
+    right: 0.6em;
+    bottom: 0.4em;
+    font-size: 1.3em;
+    display: none;
+    color: var(--blanco);
+}
+
+.conten__info a:hover::before {
+
+    display: inline-block;
+}
+
+/*SECCION EPISODIOS*/
+
+.episodios {
+
+    padding: 6em 1.4em;
+    background-color: var(--blanco-perla);
+}
+
+.episodios h2 {
+
+    padding: 0 0.6em 3em 0.6em;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.episodios h2 span {
+
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.episodios h2 span::after {
+
+    content: "";
+    position: absolute;
+    width: 4em;
+    height: 0.030em;
+    background-color: var(--gris);
+    top: 1.7em;
+    right: 0.3em;
+}
+
+.videos__categoria {
+
+    width: 80%;
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+.videos__categoria h3 {
+
+    padding: 0.5em 0;
+    font-size: 1em;
+    text-align: center;
+    border-bottom: 5px solid var(--marron);
+    font-family: var(--antiqua);
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.videos__categoria h3::after {
+
+    content: "▼";
+    margin-left: 1em;
+}
+
+.categoria__lista {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria__lista.ocultar {
+
+    display: none;
+}
+
+input[type="radio"] {
+
+    display: none;
+}
+
+.categoria__lista label {
+
+    padding: 1em;
+    background-color: var(--blanco-perla);
+    color: var(--gris);
+    border: 1px solid var(--bronce);
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="radio"]:checked + label {
+
+    background-color: var(--bronce);
+    color: var(--blanco);
+}
+
+.videos__lista {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.imagen__filtro {
+
+    width: 100%;
+    height: 88%;
+    position: absolute;
+    background-color: var(--bronce-op-60);
+    transition: .2s;
+}
+
+.videos__lista a, .video__vacio {
+
+    position: relative;
+    margin-bottom: 3em;
+    text-decoration: none;
+    color: var(--negro);
+    border: 1px solid var(--gris-claro);
+    transition: .3s;
+}
+
+.imagen__filtro::after {
+
+        content: url(../../assets/hora-cornejo/boton-play.png);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+}
+
+.videos__lista a p, .video__vacio p {
+
+    position: relative;
+    padding: 1.2em;
+    background-color: var(--blanco);
+}
+
+.videos__lista a:hover {
+
+    color: var(--marron);
+}
+
+.videos__lista a:hover .imagen__filtro {
+
+    background-color: var(--bronce-op-30);
+}
+
+.episodios__nav {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    list-style: none;
+}
+
+.episodios__nav li {
+
+    margin: 0 0.4em;
+    border: 2px solid transparent;
+    padding-bottom: 0.2em;
+    color: var(--gris);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.episodios__nav li:hover, .episodios__nav li.navActivo {
+
+    border-bottom: 2px solid var(--negro);
+    color: var(--negro);
+}
+
+/*AREAS CONTACTENOS*/
+
+.contactanos {
+
+    padding: 5em 1.4em;
+}
+
+.contactanos h2 {
+
+    text-align: center;
+    font-weight: 300;
+}
+
+.contactanos h2 span {
+    
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.contactanos h2 span::after {
+
+    content: "";
+    position: absolute;
+    width: 5.4em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.3em;
+    right: 0em;
+}
+
+.contactanos a {
+
+    display: block;
+    position: relative;
+    width: 18em;
+    margin: 2.6em auto 0 auto;
+    padding: 0.8em 1.6em 0.8em 1.6em;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    background-color: var(--marron);
+    color: var(--blanco);
+    transition: .3s;
+}
+
+.contactanos a:hover {
+
+    border: 2px solid var(--marron);
+    padding-right: 2.6em;
+    width: 18.6em;
+    background-color: transparent;
+    color: var(--marron);
+}
+
+.contactanos a::before {
+
+    content: "🡒";
+    position: absolute;
+    right: 0.6em;
+    bottom: 0.4em;
+    font-size: 1.3em;
+    display: block;
+    color: var(--marron);
+}
+
+.link__volverBlog:hover::before {
+
+    display: inline-block;
+}
+
+/*FOOTER*/
+
+footer {
+
+    padding: 3em;
+    background: transparent linear-gradient(180deg, var(--marron-oscuro) 0%,
+     var(--negro) 100%) 0% 0% no-repeat padding-box;
+}
+
+.footer__datos, .links__prim, .links__sec {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+
+    width: 85%;
+    max-width: 22em;
+    margin: 0 auto 3em auto;
+}
+
+.datos__conten {
+
+    display: flex;
+}
+
+.datos__conten p {
+
+    color: var(--blanco);
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0.8em 0 0.8em 0.7em;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.footer__linea {
+
+    border: 1px solid var(--bronce-claro);
+    margin: 3em 0;
+}
+
+.footer__links, .footer__redes h4 {
+
+    text-align: center;
+}
+
+.links__prim h4, .footer__redes h4 {
+
+    margin-top: 1em;
+    margin-bottom: 2.2em;
+    font-weight: 300;
+    opacity: 0.6;
+    color: var(--blanco);
+}
+
+.footer__links a {
+
+    margin-bottom: 1.4em;
+    margin: 0 0.9em 1.4em 0;
+    text-decoration: none;
+    color: var(--blanco);
+    transition: .3s;
+}
+
+.footer__links a:hover {
+
+    color: var(--gris);
+}
+
+.footer__links a::before {
+
+    content: "";
+    background-image: url(../../assets/flecha-link-f.svg);
+    margin-right: 0.3em;
+    display: inline-block;
+    opacity: 0;
+    transform: rotate(180deg);
+    width: 0.9em;
+    height: 0.8em;
+    transition: .3s;
+}
+
+.footer__links a:hover::before {
+    
+    opacity: 1;
+}
+
+.redes__iconos {
+
+    margin: 1em 1.1em 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1.6em);
+    justify-content: center;
+    gap: 2em 3em;
+}
+
+.redes__iconos a {
+
+    font-size: 2.2em;
+    border: 1px solid var(--blanco);
+    padding: 0em 0.640em;
+    color: var(--blanco);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.redes__iconos a i {
+
+    font-size: 0.8em;
+    margin: 0 0 0.230em -0.450em;
+}
+
+.redes__iconos a:first-child i {
+
+    margin: 0 0 0.230em -0.350em;
+}
+
+.footer__politicas {
+
+    margin-top: 7em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 300;
+    font-size: 0.850em;
+}
+
+.footer__politicas:hover {
+
+    text-decoration: underline;
+    color: var(--gris);
+}
+
+@media screen and (min-width: 768px) {
+
+    .video__filtro {
+
+        width: 60%;
+    }
+
+    .conten__video img {
+
+        width: 80%;
+        left: 50%;
+        transform: rotateX(50%);
+        transform: translateX(-50%);
+    }
+    
+    .conten__video video {
+
+        width: 60%;
+    }
+
+    .videos__lista a, .video__vacio {
+
+        width: 50%;
+    }
+
+    .imagen__filtro {
+
+        height: 92.5%;
+    }
+
+    .videos__lista a img, .video__vacio img {
+
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .linksMenu__mobile {
+
+        display: none;
+    }
+
+    header {
+
+        padding: 0 3.4em;
+    }
+    
+    header img {
+    
+        width: 7.5em;
+        padding: 0.2em 0 0 0;
+    }
+
+    .links__desktop {
+
+        display: block;
+        margin-right: 5.8em;
+        position: relative;
+    }
+
+    .links__desktop > a, .links__desktop > span {
+
+        text-decoration: none;
+        color: var(--blanco);
+        margin: 0 0.6em;
+        padding-bottom: 1.5em;
+        font-size: 0.920em;
+        cursor: pointer;
+    }
+    
+    .links__areas {
+
+        position: absolute;
+        width: 13em;
+        top: 3em;
+        right: 13.6em;
+        display: flex;
+        flex-direction: column;
+        padding: 1.8em 2.2em 0.7em 1.8em;
+        background-color: var(--blanco-perla);
+        transition: .3s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .links__desktop > span:hover ~ div, .links__areas:hover {
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .links__areas a {
+
+        margin-bottom: 1.2em;
+        text-decoration: none;
+        color: var(--negro);
+        font-size: 0.870em;
+    }
+
+    .links__areas a:hover {
+
+        color: var(--gris-claro);
+    }
+
+    .links__desktop > a::after, .links__desktop > span::after {
+
+        content: "|";
+        position: relative;
+        right: 3.4em;
+        bottom: -2em;
+        transition: .3s;
+        opacity: 0;
+    }
+
+    .links__desktop > span::after {
+
+        right: 4.3em;
+    }
+
+    .links__desktop > a:hover, .links__desktop > span:hover {
+
+        color: var(--gris-claro);
+    }
+
+    .links__desktop > a:hover::after, .links__desktop > span:hover::after {
+
+        opacity: 1;
+    }
+    
+    .fullMenu {
+    
+        right: 16.4em;
+        top: 0;
+        padding: 1.2em 1.4em 1em 1.4em;
+        height: 7em;
+    }
+    
+    .fullMenu--close {
+    
+        right: 16.4em;
+    }
+    
+    .fullMenu::after {
+    
+        right: -0.1em;
+        border-left: 3.1em solid transparent;
+        border-right: 3.1em solid transparent;
+    }
+    
+    .fullMenu--close::after {
+    
+        right: -0.180em;
+        border-left: 3.250em solid transparent;
+        border-right: 3.250em solid transparent;
+    }
+    
+    .fullMenu:hover {
+    
+        padding: 2em 1.4em 1em 1.4em;
+        height: 7.5em;
+    }
+    
+    .cambio__idioma::after {
+    
+        right: 9.5em;
+    }
+
+    .idioma__opciones {
+        
+        right: 4em;
+    }
+    
+    .menu__interno {
+    
+        width: 42vw;
+    }
+    
+    .menu__conten, .links__areas--mobile {
+    
+        align-items: flex-start;
+    }
+    
+    .menu__conten {
+    
+        margin-top: 7em;
+        padding: 0 4em;
+        font-size: 1.7em;
+    }
+    
+    .menu__conten a {
+    
+        margin-bottom: 1em;
+    }
+    
+    .links__redes {
+    
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1.6em);
+        gap: 0 1.2em;
+    }
+
+    /*MAIN HEADER*/
+
+    .header__conten {
+
+        padding: 3em 0 6em 0;
+    }
+
+    .header__fondo {
+
+        height: 25em;
+    }
+
+    .header__conten h2 {
+
+        bottom: 2.020em;
+        left: 5.6em;
+        transform: translateX(0);
+        font-size: 2.5em;
+        text-align: left;
+    }
+
+    .header__conten h2::after {
+
+        font-size: 1.7em;
+        bottom: -1.2em;
+    }
+
+    .header__refran {
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__refran > span {
+
+        width: 8em;
+        height: 0.040em;
+        margin-top: 0.8em;
+        background-color: var(--bronce);
+    }
+
+    .header__refran h3 {
+
+        font-weight: 300;
+        margin: 0 1em;
+    }
+
+    .header__refran h3 span {
+
+        font-family: var(--antiqua);
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    /*SECCION APRENDE MAS*/
+
+    .aprendeMas h2 {
+
+        padding: 0 0.6em 2.8em 0.6em;
+        font-size: 3em;
+    }
+
+    .aprendeMas__conten {
+
+        display: flex;
+        align-items: center;
+        padding: 5em 9em;
+    }
+
+    .video__filtro {
+
+        width: 100%;
+    }
+
+    .conten__video {
+
+        max-width: 25em;
+    }
+
+    .conten__video img {
+
+        width: 133%;
+    }
+
+    .conten__video video {
+
+        width: 100%;
+    }
+
+    .conten__info {
+
+        margin: 0 0 0 9em;
+        width: 40em;
+        text-align: left;
+    }
+
+    .conten__info h3 {
+
+        font-size: 1.8em;
+    }
+
+    .conten__info h3 span::after {
+
+        width: 7.5em;
+        right: -2.7em;
+    }
+
+    #lineaLab::after {
+
+        width: 7.5em;
+        right: -4.150em;
+    }
+
+    #lineaCorp::after {
+
+        width: 7.5em;
+        right: -2.150em;
+    }    
+
+    .conten__info p {
+
+        font-size: 1em;
+    }
+
+    .conten__info a {
+
+        font-size: 0.980em;
+        margin: 1.8em 0 0 0;
+    }
+
+    /*SECCION EPISODIOS*/
+
+    .episodios {
+
+        padding: 7em 5em;
+    }
+
+    .episodios h2 {
+
+        text-align: left;
+        padding: 0 0 3em 0;
+        font-size: 1.8em;
+    }
+
+    .episodios h2 span::after {
+
+        right: 0.680em;
+    }
+
+    .episodios__videos {
+
+        display: flex;
+    }
+
+    .videos__categoria {
+
+        width: 80%;
+        max-width: 14em;
+        margin: 0 1.8em 0 0;
+    }
+
+    .videos__categoria h3 {
+
+        font-size: 1em;
+    }
+
+    .videos__categoria h3::after {
+
+        display: none;
+    }
+
+    .categoria__lista label {
+
+        text-align: left;
+        font-size: 0.920em;
+    }
+
+    .videos__lista {
+
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+
+    .imagen__filtro {
+
+        width: 100%;
+        height: 89%;
+        position: absolute;
+        background-color: var(--bronce-op-60);
+        transition: .2s;
+    }
+
+    .videos__lista a, .video__vacio {
+
+        margin: 0 0.6em 3em 0.6em;
+    }
+
+    .videos__lista a p, .video__vacio p {
+
+        padding: 1.2em 0.8em 1.2em 1.2em;
+        font-size: 0.9em;
+    }
+
+    .videos__lista a:hover {
+
+        color: var(--marron);
+    }
+
+    .videos__lista a:hover .imagen__filtro {
+
+        background-color: var(--bronce-op-30);
+    }
+
+    .episodios__nav {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 3em;
+        list-style: none;
+    }
+
+    .episodios__nav li {
+
+        margin: 0 0.4em;
+        border: 2px solid transparent;
+        padding-bottom: 0.2em;
+        color: var(--gris);
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .episodios__nav li:hover, .episodios__nav li.navActivo {
+
+        border-bottom: 2px solid var(--negro);
+        color: var(--negro);
+    }
+
+    /*AREAS CONTACTENOS*/
+
+    .contactanos {
+
+        padding: 8.4em 4em;
+        background: url(../../assets/contactanos.webp) no-repeat;
+        background-size: cover;
+        background-position: right;
+        display: flex;
+        align-items: center;
+    }
+
+    .contactanos h2 {
+
+        text-align: left;
+        font-size: 2.4em;
+    }
+
+    .contactanos h2 span {
+        
+        font-size: 1.6em;
+    }
+
+    .contactanos h2 span::after {
+
+        width: 2.4em;
+        top: 1.4em;
+        right: 3em;
+    }
+
+    .contactanos a {
+
+        margin: 0.6em auto 0 auto;
+    }
+
+    /*FOOTER*/
+
+    footer {
+
+        padding: 6em 3em 4em 3em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__contenido {
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__datos, .links__prim, .links__sec {
+
+        align-items: flex-start;
+    }
+
+    .footer__datos {
+
+        margin-right: 4em;
+    }
+
+    .footer__logo {
+
+        width: 100%;
+        max-width: none;
+    }
+
+    .datos__conten {
+
+        display: flex;
+    }
+
+    .datos__conten p {
+
+        color: var(--blanco);
+        font-weight: 300;
+        font-size: 0.960em;
+        margin: 0.8em 0 0.8em 0.7em;
+        opacity: 0.7;
+        text-align: left;
+    }
+
+    .footer__linea {
+
+        margin: 2em 1em;
+        position: relative;
+        top: 1.7em;
+    }
+
+    .footer__links, .footer__redes h4 {
+
+        text-align: left;
+    }
+
+    .links__prim h4, .footer__redes h4 {
+
+        font-size: 0.9em;
+    }
+
+    .footer__links {
+
+        display: flex;
+    }
+
+    .links__sec {
+
+        justify-content: flex-end;
+        margin-left: 1.1em;
+    }
+
+    .footer__redes {
+
+        margin-left: 3em;
+    }
+
+    .redes__iconos {
+
+        gap: 1em 1.8em;
+    }
+
+    .redes__iconos a {
+
+        font-size: 1.8em;
+        border: 1px solid var(--blanco);
+        padding: 0em 0.640em;
+        color: var(--blanco);
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .redes__iconos a i {
+
+        font-size: 0.8em;
+        margin: 0 0 0.230em -0.450em;
+    }
+
+    .redes__iconos a:first-child i {
+
+        margin: 0 0 0.230em -0.350em;
+    }
+
+    .footer__politicas {
+
+        display: inline-block;
+        width: 12em;
+        margin-top: 6em;
+        margin-right: 3em;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    header {
+
+        padding: 0 6em;
+    }
+
+    .fullMenu {
+
+        right: 20.6em;
+    }
+
+    .fullMenu::after {
+
+        border-left: 3em solid transparent;
+    }
+
+    .fullMenu--close::after {
+
+        right: -0.035em;
+        border-left: 3.2em solid transparent;
+        border-right: 3.2em solid transparent;
+    }
+    
+    .footer__datos {
+
+        margin-right: 9em;
+    }
+
+    .footer__linea {
+
+        margin: 2em 3em;
+    }
+
+    .links__sec {
+
+        margin-left: 1.6em;
+    }
+
+    .footer__redes {
+
+        margin-left: 5em;
+    }
+
+    .redes__iconos {
+
+        gap: 1em 2.1em;
+    }
+
+    .redes__iconos a {
+
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .conten__info {
+
+        margin: 0 0 0 18em;
+    }
+
+    .contactanos {
+
+        padding: 10.5em 10em;
+        background: url(../../assets/contactanos.webp) no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .contactanos a {
+
+        margin: 0.6em auto 0 auto;
+    }
+    
+    .footer__politicas {
+
+        margin-right: 7em;
+    }
+}
