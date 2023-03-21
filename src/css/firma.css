@@ -30,10 +30,10 @@
     --bronce-claro: #DCB57C;
     --bronce: #B7935E;
     --bronce-op-10: rgba(183, 147, 94, 0.160);
+    --bronce-op-30: rgba(183, 147, 94, 0.3);
     --marron: #9F7044;
     --marron-oscuro: #3E2D1C;
     --verde: #54BE3A;
-    
 }
 
 body {
@@ -316,120 +316,480 @@ nav {
     font-size: 0.8em;
 }
 
-/*MAIN ARTICULO*/
+/*MAIN HEADER*/
 
-main {
+.header__conten {
 
-    padding-top: 3em;
-    background-color: var(--blanco-perla);
+    padding: 3em 0 0 0;
 }
 
-main img {
+.header__fondo {
+
+    background: url(../../assets/areas/civil.webp) no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 22em;
+    position: relative;
+}
+
+.header__conten h2 {
+
+    position: absolute;
+    bottom: 1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-size: 2.3em;
+    color: var(--blanco);
+    border-bottom: 1px solid var(--blanco);;
+}
+
+.header__conten h2 span {
+
+    font-family: var(--antiqua);
+    font-weight: 500;
+}
+
+.header__conten h2::after {
+
+    content: "|";
+    font-weight: 300;
+    font-size: 1.320em;
+    position: absolute;
+    bottom: -1.230em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__refran {
+
+    padding: 2em;
+    background-color: var(--bronce-op-30);
+    text-align: center;
+    color: var(--marron);
+}
+
+.header__refran h3 {
+
+    font-weight: 300;
+}
+
+.header__refran h3 span {
+
+    font-family: var(--antiqua);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/*SINOPSIS*/
+
+.sinopsis {
+
+    padding-bottom: 4em;
+}
+
+.sinopsis img {
 
     width: 100%;
 }
 
-.header__articulo {
+.sinopsis p {
 
-    position: relative;
+    padding: 3em 1.4em;
+    line-height: 1.5em;
+    font-weight: 300;
 }
 
-.titulo__articulo {
+/*FIRMA SEDES*/
 
-    position: relative;
-    bottom: 2em;
-    width: 85%;
-    max-width: 34em;
-    padding: 1.4em 2em;
-    margin: 0 auto;
-    background-color: var(--blanco);
-    border-bottom: 7px solid var(--bronce);
+.firmaSedes {
+
+    padding: 4em 1.4em;
+    background-color: var(--negro);
+    transition: .3s;
 }
 
-.titulo__articulo time {
+.firmaSedes p {
+
+    color: var(--gris-claro);
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.firmaSedes:hover {
+
+    background-color: var(--bronce);
+}
+
+.firmaSedes:hover p {
+
+    color: var(--blanco-perla);
+}
+
+/*CEO*/
+
+.ceo {
+
+    padding: 4em 0;
+}
+
+.ceo h2 {
+
+    margin-bottom: 2em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ceo h2 span {
+
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 400;
+}
+
+.ceo h2 span::after {
+
+    content: "";
+    position: absolute;
+    width: 4.8em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.9em;
+    right: -1.4em;
+}
+
+.ceo__conten img {
+
+    width: 100%;
+}
+
+.ceo__datos {
+
+    padding: 4em 1.4em 0 1.4em;
+}
+
+.ceo__datos > p {
     
-    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.ceo__curric {
+
+    margin-top: 3em;
+    border-left: 6px solid var(--bronce);
+    padding-left: 1.3em;
+}
+
+.ceo__curric h3 {
+
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.ceo__curric p {
+
+    font-size: 0.950em;
+    font-weight: 300;
+}
+
+#extra {
+
+    font-size: 0.7em;
+}
+
+/*MISION Y VISION*/
+
+.mision {
+
+    padding: 4em 1.4em;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.mision__texto h2, .mision__valores h2 {
+
+    position: relative;
+    text-align: center;
+    font-family: var(--antiqua);
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+.mision__texto h2::after, .mision__valores h2::after {
+
+    content: "";
+    position: absolute;
+    width: 3.8em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.7em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mision__texto p {
+
+    margin: 2em 0;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.mision__conten img {
+
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.mision__valores {
+
+    margin-top: 5em;
+}
+
+.valores__conten {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3em 0;
+    margin-top: 5em;
+}
+
+.valores__texto::before {
+
+    content: "";
+    position: relative;
+    display: block;
+    margin-bottom: 0.8em;
+    width: 13em;
+    height: 0.360em;
+    background-color: var(--bronce);
+}
+
+.valores__texto h3 {
+
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.valores__texto p {
+
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/*SEDE GALERIA*/
+
+.sedeGaleria {
+
+    padding: 4em 1.4em 12em 1.4em;
+}
+
+.sedeGaleria h2 {
+
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.sedeGaleria h2 span {
+
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 300;
+}
+
+.sedeGaleria h2 span::after {
+
+    content: "";
+    position: absolute;
+    width: 4.4em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.8em;
+    right: 0.4em;
+}
+
+.sedeGaleria__galeria {
+
+    position: relative;
+    margin-top: 8em;
+}
+
+.sedeGaleria__galeria::after {
+
+content: "";
+    position: absolute;
+    display: none;
+    z-index: -1;
+    width: 98%;
+    height: 100%;
+    left: 2.1em;
+    top: 0.7em;
+    background-color: var(--gris-claro);
+}
+
+.galeria__conten {
+
+    overflow: hidden;
+}
+
+.galeria__imagenes {
+
+    display: flex;
+    width: 100%;
+    transition: .3s;
+}
+
+.galeria__imagenes img {
+
+    width: 100%;
+}
+
+#btnIzq, #btnDer {
+
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 35%;
+    padding: 2em 0.5em;
+    background-color: var(--gris-claro);
+    color: var(--marron);
+    cursor: pointer;
+}
+
+#btnIzq {
+
+    left: 0;
+}
+
+#btnDer {
+
+    right: 0;
+}
+
+/*AREAS NUMEROS*/
+
+.numeros {
+
+    padding: 2em 0;
+}
+
+.numeros h2 {
+
+    text-align: center;
+    margin: 0 auto;
+    width: 6em;
+    font-family: var(--antiqua);
+    font-size: 1.9em;
+    border-bottom: 1px solid var(--marron);
+}
+
+.numeros > p {
+
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+}
+
+.numeros__conten {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.6em 1.4em;
+}
+
+.numeros__texto {
+
+    width: 80%;
+    margin: 1.4em auto;
+    text-align: center;
+}
+
+.numeros__texto h3 {
+
+    font-family: var(--antiqua);
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.numeros__texto h3 span {
+
+    font-size: 1.2em;
+    display: block;
+}
+
+/*NUESTROS CLIENTES*/
+
+.clientes {
+
+    padding: 4em 1.4em;
+    background-color: var(--bronce-op-10);
+}
+
+.clientes h2 {
+
+    text-align: center;
     font-weight: 600;
     color: var(--bronce);
 }
 
-.titulo__articulo h2 {
+.clientes__logos {
 
-    margin-top: 0.8em;
-    font-size: 1.4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 0;
+    margin-top: 4em;
 }
 
-.volverBlog__desktop {
+.clientes__logos img {
 
-    text-decoration: none;
-    color: var(--bronce-claro);
-    display: none;
+    width: 70%;
+    justify-self: center;
 }
 
-.volverBlog__desktop i {
+/*AREAS CONTACTENOS*/
 
-    position: relative;
-    bottom: 0.2em;
+.contactanos {
+
+    padding: 5em 1.4em;
 }
 
-.body__articulo {
+.contactanos h2 {
 
-    padding: 0.6em 1.4em;
-    color: var(--gris-oscuro);
-}
-
-.body__articulo #resolucionSub {
-
-    text-decoration: underline;
     text-align: center;
-    margin-bottom: 1em;
-    font-size: 0.950em;
+    font-weight: 300;
 }
 
-.body__articulo p {
-
-    line-height: 1.4em;
+.contactanos h2 span {
+    
+    position: relative;
+    font-family: var(--antiqua);
+    font-weight: 700;
+    font-size: 1.3em;
 }
 
-.body__articulo h3 {
+.contactanos h2 span::after {
 
-    color: var(--marron);
+    content: "";
+    position: absolute;
+    width: 5.4em;
+    height: 0.030em;
+    background-color: var(--bronce);
+    top: 1.3em;
+    right: 0em;
 }
 
-.body__articulo img {
-
-    margin: 1.4em 0;
-}
-
-.refer__articulo {
-
-    margin-top: 1.7em;
-    background-color: var(--bronce-op-10);
-    border-top: 4px solid var(--bronce-claro); 
-}
-
-.refer__articulo p {
-
-    font-size: 0.850em;
-    padding: 0.5em 0.8em;
-}
-
-.refer__link {
-
-    display: block;
-    padding: 1em;
-    background-color: var(--blanco);
-    text-decoration: none;
-    color: var(--gris);
-    font-size: 0.8em;
-    word-break: break-word;
-}
-
-.link__volverBlog {
+.contactanos a {
 
     display: block;
     position: relative;
-    width: 12em;
+    width: 18em;
     margin: 2.6em auto 0 auto;
     padding: 0.8em 1.6em 0.8em 1.6em;
     text-decoration: none;
@@ -440,192 +800,29 @@ main img {
     transition: .3s;
 }
 
-.link__volverBlog:hover {
+.contactanos a:hover {
 
     border: 2px solid var(--marron);
-    padding-left: 2.6em;
-    width: 12.6em;
+    padding-right: 2.6em;
+    width: 18.6em;
     background-color: transparent;
     color: var(--marron);
 }
 
-.link__volverBlog::before {
+.contactanos a::before {
 
-    content: "🡐";
+    content: "🡒";
     position: absolute;
-    right: 8.1em;
+    right: 0.6em;
     bottom: 0.4em;
     font-size: 1.3em;
-    display: none;
+    display: block;
     color: var(--marron);
 }
 
 .link__volverBlog:hover::before {
 
     display: inline-block;
-}
-
-.otros__articulo {
-
-    margin-top: 4.5em;
-    background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
-    background-size: cover;
-    padding: 4em 2em 2.7em 2em;
-}
-
-.otros__articulo h3 {
-
-    text-align: center;
-    width: 4.2em;
-    margin: 0 auto 2em auto;
-    font-size: 1.8em;
-    padding-bottom: 0.6em;
-    color: var(--blanco);
-    font-weight: 400;
-    font-family: var(--antiqua);
-    border-bottom: 1px solid var(--gris-claro);
-}
-
-.otros__articulo h3 span {
-
-    font-family: var(--inter);
-    font-weight: 600;
-}
-
-.articulos__relac {
-
-    display: flex;
-    flex-direction: column;
-}
-
-.articulos__relac article {
-
-    position: relative;
-    margin: 0.9em auto;
-    max-width: 24em;
-    height: 17em;
-    padding: 2.2em 2.6em 1.9em 2.6em;
-    background-color: var(--blanco);
-}
-
-.articulos__relac article time {
-
-    font-size: 0.750em;
-    font-weight: 600;
-    color: var(--bronce);
-}
-
-.articulos__relac article h4 {
-
-    margin-top: 0.6em;
-    font-weight: 600;
-}
-
-.articulos__relac article a {
-
-    position: absolute;
-    bottom: 1em;
-    text-decoration: none;
-    background-color: var(--marron);
-    border: 2px solid transparent;
-    padding: 0.5em 1.4em;
-    color: var(--blanco);
-    transition: .3s;
-}
-
-.articulos__relac article a span {
-
-    margin-left: 0.4em;
-}
-
-.articulos__relac article a:hover {
-
-    padding-left: 1.8em;
-    border: 2px solid var(--marron);
-    background-color: var(--blanco);
-    color: var(--marron);
-}
-
-/*MAIN POLITICAS*/
-
-.main__politicas {
-
-    background-color: var(--blanco);
-}
-
-.body__articulo--politicas {
-
-    background-color: var(--blanco-perla);
-}
-
-.header__articulo--politicas {
-
-    position: relative;
-}
-
-.titulo__articulo--politicas {
-
-    bottom: 0;
-    width: 100%;
-    max-width: none;
-    padding: 1.4em 2em;
-    text-align: center;
-    margin: 2.5em 0 0 0;
-}
-
-#h2Politic {
-
-    font-size: 1.6em;
-}
-
-ul {
-
-    padding-left: 1em;
-}
-
-ul li {
-
-    color: var(--bronce);
-    line-height: 1.4em;
-}
-
-.lista__tratam, .lista__datos {
-
-    padding: 0;
-}
-
-.lista__tratam li {
-
-    list-style: none;
-    color: var(--gris-oscuro);
-}
-
-.lista__tratam li::before {
-
-    content: "=";
-    position: relative;
-    top: 0.1em;
-    color: var(--marron);
-    font-size: 1.6em;
-    margin-right: 0.3em;
-}
-
-.lista__datos li{ 
-
-    list-style: none;
-    color: var(--gris-oscuro);
-}
-
-.lista__datos li span {
-
-    color: var(--marron);
-    font-weight: 600;
-}
-
-.lista__datos li a {
-
-    text-decoration: none;
-    color: var(--gris-oscuro);
 }
 
 /*FOOTER*/
@@ -765,8 +962,31 @@ footer {
     color: var(--gris);
 }
 
+@media screen and (min-width: 768px) {
+
+    .valores__conten {
+
+        padding: 0 6em;
+    }
+
+    .mision__conten img {
+        
+        width: 55%;
+    }
+
+    #btnIzq, #btnDer {
+
+        padding: 3em 0.8em;
+    }
+
+    .clientes__logos {
+
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+}
+
 @media screen and (min-width: 992px) {
-    
     
     .linksMenu__mobile {
 
@@ -933,124 +1153,379 @@ footer {
         gap: 0 1.2em;
     }
 
-    /*MAIN ARTICULO*/
+    /*MAIN HEADER*/
 
-    main {
+    .header__conten {
 
-        padding-top: 4.6em;
+        padding: 3em 0 6em 0;
     }
 
-    .header__articulo img {
+    .header__fondo {
 
-        width: 65%;
-        display: block;
-        margin: 0 auto;
+        height: 25em;
     }
 
-    .titulo__articulo {
+    .header__conten h2 {
 
-        position: absolute;
-        bottom: 4em;
-        left: 0;
-        width: 48em;
-        max-width: none;
-        padding: 1.6em 2em 1.6em 10.8em;
-    }
-
-    .titulo__articulo time {
-        
-        font-size: 0.9em;
-    }
-
-    .titulo__articulo h2 {
-
-        margin-top: 0.5em;
-        font-size: 1.7em;
-    }
-
-    .volverBlog__desktop {
-
-        display: inline-block;
-        position: relative;
-        bottom: 23em;
-        font-size: 0.9em;
-        left: 5em;
-    }
-
-    .body__articulo {
-
-        padding: 2em 1.4em;
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .refer__articulo {
-
-        background-color: var(--bronce-op-10);
-        border-top: 4px solid var(--bronce-claro);
-    }
-
-    .refer__articulo p {
-
-        font-size: 0.9em;
-    }
-
-    .refer__link {
-
-        font-size: 0.940em;
-    }
-
-    .link__volverBlog {
-
-        margin: 3.2em auto 0 auto;
-    }
-
-    .otros__articulo {
-
-        margin-top: 3.8em;
-        background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
-        background-size: cover;
-        padding: 4em 2.4em 4.6em 2.4em;
-    }
-
-    .otros__articulo h3 {
-
+        bottom: 2.020em;
+        left: 5.6em;
+        transform: translateX(0);
+        font-size: 2.5em;
         text-align: left;
-        margin: 2em 0 1.4em 4%;
-        font-size: 1.850em;
     }
 
-    .articulos__relac {
+    .header__conten h2::after {
 
-        flex-direction: row;
+        font-size: 1.7em;
+        bottom: -1.2em;
+    }
+
+    .header__refran {
+
+        position: relative;
+        display: flex;
         justify-content: center;
     }
 
-    .articulos__relac article {
+    .header__refran > span {
 
-        margin: 0.9em 1em;
-        width: 22em;
-        height: 18em;
-        padding: 2.4em 2.7em 1.9em 2.7em;
+        width: 8em;
+        height: 0.040em;
+        margin-top: 0.8em;
+        background-color: var(--bronce);
     }
 
-    /*MAIN POLITICAS*/
+    .header__refran h3 {
 
-    .titulo__articulo--politicas {
+        font-weight: 300;
+        margin: 0 1em;
+    }
+
+    .header__refran h3 span {
+
+        font-family: var(--antiqua);
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    /*SINOPSIS*/
+
+    .sinopsis {
+
+        padding-bottom: 4em;
+    }
+
+    .sinopsis__uno, .sinopsis__dos {
+
+        display: flex;
+        align-items: center;
+        margin: 2em 0;
+    }
+
+    .sinopsis__dos img {
+
+        order: 1;
+    }
+
+    .sinopsis img {
+
+        width: 35%;
+    }
+
+    .sinopsis p {
+
+        padding: 0 7.5em;
+        font-size: 1.2em;
+        max-width: 40em;
+        margin: 0 auto;
+    }
+
+    /*FIRMA SEDES*/
+
+    .firmaSedes {
+
+        padding: 6em 10em;
+    }
+
+    .firmaSedes p {
+
+        font-size: 1.2em;
+    }
+
+    /*CEO*/
+
+    .ceo {
+
+        padding: 6em 8em;
+    }
+
+    .ceo h2 {
+
+        margin-bottom: 5em;
+        font-size: 1.8em;
+    }
+
+    .ceo__conten {
+
+        display: flex;
+    }
+
+    .ceo__conten img {
+
+        width: 53%;
+        max-width: 32em;
+        align-self: center;
+    }
+
+    .ceo__datos {
+
+        padding: 0 0 0 4.5em;
+        align-self: flex-end;
+    }
+
+    /*MISION Y VISION*/
+
+    .mision {
+
+        padding: 8em 3.5em;
+    }
+
+    .mision__conten {
+
+        display: flex;
+        align-items: center;
+    }
+
+    #vision {
+
+        order: 1;
+    }
+
+    .mision__texto h2, .mision__valores h2 {
+
+        right: 0.8em;
+    }
+
+    .mision__texto p {
+
+        font-size: 1.1em;
+    }
+
+    .mision__conten img {
+
+        width: 30%;
+        max-width: 22em;
+        margin: 0 5em;
+    }
+
+    .mision__valores {
+
+        margin-top: 5em;
+    }
+
+    .valores__conten {
+
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5em 2.2em;
+        margin-top: 4em;
+        padding: 0;
+    }
+
+    .valores__texto p {
+
+        width: 13em;
+    }
+
+    /*SEDE GALERIA*/
+
+    .sedeGaleria {
+
+        padding: 6em 10em;
+    }
+
+    .sedeGaleria h2 {
+
+        font-size: 1.8em;
+    }
+
+    .sedeGaleria__galeria {
+
+        margin: 7em auto 0 auto;
+        max-width: 65em;
+    }
+
+    .sedeGaleria__galeria::after {
+
+        display: block;
+    }
+
+    .sedeGaleria__galeria::before {
+
+        content: "";
+        display: block;
+        position: absolute;
+        width: 38%;
+        height: 40%;
+        left: -1em;
+        bottom: -1em;
+        border-left: 6px solid var(--bronce);
+        border-bottom: 6px solid var(--bronce);
+    }
+
+    #btnIzq, #btnDer {
+
+        bottom: 42%;
+        padding: 2.8em 0.7em;
+    }
+
+    #btnIzq {
+
+        left: -2em;
+    }
+
+    #btnDer {
+
+        right: -3em;
+    }
+
+    /*AREAS NUMEROS*/
+
+    .numeros {
+
+        padding: 10em 2em 6em 2em;
+        margin: 0 auto;
+        width: 60em;
+    }
+
+    .numeros h2 {
+
+        text-align: left;
+        margin: 0;
+        width: none;
+        font-family: var(--antiqua);
+        font-size: 3em;
+        border-bottom: 1px solid var(--marron);
+    }
+
+    .numeros > p {
+
+        text-align: left;
+        font-size: 1.4em;
+        margin-bottom: 0.4em;
+        margin-right: 3.7em;
+    }
+
+    .numeros__conten {
+
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 3.6em 0;
+        margin-top: 2em;
+    }
+
+    .numeros__texto {
+
+        width: 16em;
+        margin: 1.4em auto;
+        text-align: left;
+    }
+
+    .numeros__texto:nth-child(2) {
+
+        border-left: 1px solid var(--gris-claro);
+        border-right: 1px solid var(--gris-claro);
+        padding: 0 1.6em 0 2em;
+        margin-left: 0;
+        width: 18em;
+        height: 11em;
+    }
+
+    .numeros__texto h3 {
+
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 1.8em;
+        margin-bottom: 0.4em;
+    }
+
+    .numeros__texto:first-child h3 {
+
+        width: 8.8em;
+        margin-bottom: 0;
+        line-height: 1em;
+    }
+
+    .numeros__texto p {
+
+        line-height: 1.6em;
+        font-size: 0.950em;
+    }
+
+    .numeros__texto:first-child p {
 
         position: relative;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-        max-width: none;
-        padding: 1.4em 0 0.4em 2em;
-        text-align: right;
-        margin: 3.8em 0 0 0;
+        top: 1em;
     }
 
-    #h2Politic {
+    .numeros__texto h3 span {
 
-        font-size: 2em;
+        font-size: 1.6em;
+        margin-right: 0.3em;
+    }
+
+    /*NUESTROS CLIENTES*/
+
+    .clientes {
+
+        padding: 3.5em 1.4em;
+    }
+
+    .clientes h2 {
+
+        font-size: 1.7em;
+    }
+
+    .clientes__logos {
+
+        grid-template-columns: repeat(4, 16em);
+        justify-content: center;
+    }
+
+    /*AREAS CONTACTENOS*/
+
+    .contactanos {
+
+        padding: 8.4em 4em;
+        background: url(../../assets/contactanos.webp) no-repeat;
+        background-size: cover;
+        background-position: right;
+        display: flex;
+        align-items: center;
+    }
+
+    .contactanos h2 {
+
+        text-align: left;
+        font-size: 2.4em;
+    }
+
+    .contactanos h2 span {
+        
+        font-size: 1.6em;
+    }
+
+    .contactanos h2 span::after {
+
+        width: 2.4em;
+        top: 1.4em;
+        right: 3em;
+    }
+
+    .contactanos a {
+
+        margin: 0.6em auto 0 auto;
     }
 
     /*FOOTER*/
@@ -1177,6 +1652,16 @@ footer {
         padding: 0 6em;
     }
 
+    .cambio__idioma::after {
+        
+        right: 13.4em;
+    }
+
+    .idioma__opciones {
+        
+        right: 6.6em;
+    }
+
     .fullMenu {
 
         right: 20.6em;
@@ -1194,22 +1679,6 @@ footer {
         border-right: 3.2em solid transparent;
     }
 
-    
-    .idioma__opciones {
-        
-        right: 6.6em;
-    }
-    
-    .cambio__idioma::after {
-        
-        right: 13.4em;
-    }
-
-    #h2Politic {
-
-        font-size: 2.2em;
-    }
-    
     .footer__datos {
 
         margin-right: 9em;
@@ -1239,22 +1708,70 @@ footer {
 
         font-size: 2em;
     }
-
 }
 
 @media screen and (min-width: 1400px) {
 
-    .otros__articulo h3 {
+    .sinopsis p {
 
-        margin: 2em 0 1.4em 7.4%;
+        padding: 0px 3.5em;
     }
 
-    .articulos__relac article {
-        
-        margin: 0.9em 1.6em;
-        width: 23.5em;
+    .firmaSedes {
+
+        padding: 7em 16em;
     }
 
+    .ceo__conten {
+
+        justify-content: center;
+    }
+
+    .mision__texto p {
+
+        max-width: 20em;
+    }
+
+    .mision__conten {
+
+        justify-content: center;
+    }
+
+    .mision__valores {
+
+        margin-left: 3em;
+    }
+
+    .valores__conten {
+
+        padding: 0 10em;
+    }
+    
+    .ceo__datos {
+
+        max-width: 40em;
+    }
+    
+    .numeros {
+
+        padding: 11em 2em 6em;
+        width: 66em;
+    }
+
+    .contactanos {
+
+        padding: 10.5em 10em;
+        background: url(../../assets/contactanos.webp) no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .contactanos a {
+
+        margin: 0.6em auto 0 auto;
+    }
+    
     .footer__politicas {
 
         margin-right: 7em;

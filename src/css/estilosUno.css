@@ -1320,6 +1320,16 @@ footer {
         border-left: 3.2em solid transparent;
         border-right: 3.2em solid transparent;
     }
+
+    .cambio__idioma::after {
+        
+        right: 13.4em;
+    }
+
+    .idioma__opciones {
+        
+        right: 6.6em;
+    }
     
     .footer__datos {
 

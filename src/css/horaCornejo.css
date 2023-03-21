@@ -721,6 +721,11 @@ input[type="radio"]:checked + label {
     transition: .3s;
 }
 
+.episodios__nav span {
+
+    color: var(--gris);
+}
+
 .episodios__nav li:hover, .episodios__nav li.navActivo {
 
     border-bottom: 2px solid var(--negro);
@@ -1552,6 +1557,16 @@ footer {
         right: -0.035em;
         border-left: 3.2em solid transparent;
         border-right: 3.2em solid transparent;
+    }
+
+    .idioma__opciones {
+        
+        right: 6.6em;
+    }
+    
+    .cambio__idioma::after {
+        
+        right: 13.4em;
     }
     
     .footer__datos {

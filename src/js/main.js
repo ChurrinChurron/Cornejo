@@ -8,6 +8,7 @@ let listaCateg = document.querySelector("#categAreas");
 let video = document.querySelector("#video");
 let fondoVideo = document.querySelector(".video__filtro");
 
+
 /*FUNCION ABRIR Y CERRAR MENU NAV*/
 
 botonNav.addEventListener("click", () => {

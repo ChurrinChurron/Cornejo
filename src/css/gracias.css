@@ -976,13 +976,13 @@ footer {
     }
 
     .idioma__opciones {
-
-        right: 6.4em;
+        
+        right: 6.6em;
     }
-
+    
     .cambio__idioma::after {
-
-        right: 13em;
+        
+        right: 13.4em;
     }
 
     .footer__datos {

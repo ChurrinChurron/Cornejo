@@ -30,6 +30,7 @@
     --bronce-claro: #DCB57C;
     --bronce: #B7935E;
     --bronce-op-10: rgba(183, 147, 94, 0.160);
+    --bronce-op-30: rgba(183, 147, 94, 0.3);
     --marron: #9F7044;
     --marron-oscuro: #3E2D1C;
     --verde: #54BE3A;
@@ -316,25 +317,98 @@ nav {
     font-size: 0.8em;
 }
 
-/*MAIN ARTICULO*/
+/*MAIN HEADER*/
 
-main {
+.header__conten {
 
-    padding-top: 3em;
-    background-color: var(--blanco-perla);
+    padding: 3em 0 0 0;
 }
 
-main img {
+.header__fondo {
+
+    background: url(../../assets/articulos-blog/fondo-blog.webp) no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 22em;
+    position: relative;
+}
+
+.header__conten h2 {
+
+    position: absolute;
+    bottom: 1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-size: 2.3em;
+    color: var(--blanco);
+    border-bottom: 1px solid var(--blanco);;
+}
+
+.header__conten h2 span {
+
+    font-family: var(--antiqua);
+    font-weight: 500;
+}
+
+.header__conten h2::after {
+
+    content: "|";
+    font-weight: 300;
+    font-size: 1.320em;
+    position: absolute;
+    bottom: -1.230em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__refran {
+
+    padding: 2em;
+    background-color: var(--bronce-op-30);
+    text-align: center;
+    color: var(--marron);
+}
+
+.header__refran h3 {
+
+    font-weight: 300;
+}
+
+.header__refran h3 span {
+
+    font-family: var(--antiqua);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/*NOTICIA DESTACADA*/
+
+.noticiaDestac {
+
+    padding-bottom: 4em;
+    background-color: var(--gris-claro);
+}
+
+.noticiaDestac__conten {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticiaDestac__conten img {
 
     width: 100%;
 }
 
-.header__articulo {
+.conten__caja {
 
-    position: relative;
+    order: 1;
 }
 
-.titulo__articulo {
+.caja__texto {
 
     position: relative;
     bottom: 2em;
@@ -343,89 +417,22 @@ main img {
     padding: 1.4em 2em;
     margin: 0 auto;
     background-color: var(--blanco);
-    border-bottom: 7px solid var(--bronce);
 }
 
-.titulo__articulo time {
-    
+.caja__texto time {
+
     font-size: 0.8em;
     font-weight: 600;
     color: var(--bronce);
 }
 
-.titulo__articulo h2 {
+.caja__texto h4 {
 
     margin-top: 0.8em;
     font-size: 1.4em;
 }
 
-.volverBlog__desktop {
-
-    text-decoration: none;
-    color: var(--bronce-claro);
-    display: none;
-}
-
-.volverBlog__desktop i {
-
-    position: relative;
-    bottom: 0.2em;
-}
-
-.body__articulo {
-
-    padding: 0.6em 1.4em;
-    color: var(--gris-oscuro);
-}
-
-.body__articulo #resolucionSub {
-
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 0.950em;
-}
-
-.body__articulo p {
-
-    line-height: 1.4em;
-}
-
-.body__articulo h3 {
-
-    color: var(--marron);
-}
-
-.body__articulo img {
-
-    margin: 1.4em 0;
-}
-
-.refer__articulo {
-
-    margin-top: 1.7em;
-    background-color: var(--bronce-op-10);
-    border-top: 4px solid var(--bronce-claro); 
-}
-
-.refer__articulo p {
-
-    font-size: 0.850em;
-    padding: 0.5em 0.8em;
-}
-
-.refer__link {
-
-    display: block;
-    padding: 1em;
-    background-color: var(--blanco);
-    text-decoration: none;
-    color: var(--gris);
-    font-size: 0.8em;
-    word-break: break-word;
-}
-
-.link__volverBlog {
+.conten__caja a {
 
     display: block;
     position: relative;
@@ -440,192 +447,154 @@ main img {
     transition: .3s;
 }
 
-.link__volverBlog:hover {
+.conten__caja a:hover {
 
     border: 2px solid var(--marron);
-    padding-left: 2.6em;
-    width: 12.6em;
+    padding-left: 2.2em;
     background-color: transparent;
     color: var(--marron);
 }
 
-.link__volverBlog::before {
+.conten__caja a i, .articulo__conten a i {
 
-    content: "🡐";
-    position: absolute;
-    right: 8.1em;
-    bottom: 0.4em;
-    font-size: 1.3em;
-    display: none;
-    color: var(--marron);
+    margin-left: 0.6em;
 }
 
-.link__volverBlog:hover::before {
+/*MAS ARTICULOS*/
 
-    display: inline-block;
+.masArticulos {
+
+    padding: 4em 1.4em;
+    background-color: var(--negro);
 }
 
-.otros__articulo {
+.masArticulos__categorias {
 
-    margin-top: 4.5em;
-    background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
-    background-size: cover;
-    padding: 4em 2em 2.7em 2em;
+    display: flex;
+    justify-content: center;
 }
 
-.otros__articulo h3 {
+.articulos__categoria h4 {
 
+    margin-bottom: 1em;
     text-align: center;
-    width: 4.2em;
-    margin: 0 auto 2em auto;
-    font-size: 1.8em;
-    padding-bottom: 0.6em;
     color: var(--blanco);
-    font-weight: 400;
-    font-family: var(--antiqua);
-    border-bottom: 1px solid var(--gris-claro);
 }
 
-.otros__articulo h3 span {
-
-    font-family: var(--inter);
-    font-weight: 600;
-}
-
-.articulos__relac {
+.categoria__lista {
 
     display: flex;
     flex-direction: column;
+    margin: 0 2.8em;
 }
 
-.articulos__relac article {
+input[type="radio"] {
+
+    display: none;
+}
+
+.categoria__lista label {
+
+    padding: 0.6em 0;
+    color: var(--gris);
+    font-size: 0.9em;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="radio"]:checked + label {
+
+    color: var(--blanco);
+}
+
+.masArticulos__conten {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em 0;
+    margin-top: 6em;
+}
+
+.articulo__conten {
 
     position: relative;
-    margin: 0.9em auto;
+    margin: 0 auto;
     max-width: 24em;
-    height: 17em;
-    padding: 2.2em 2.6em 1.9em 2.6em;
+    height: 32em;
     background-color: var(--blanco);
 }
 
-.articulos__relac article time {
+.articulo__conten img {
 
-    font-size: 0.750em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.articulo__conten time {
+    
+    padding-left: 2em;
+    font-size: 0.8em;
     font-weight: 600;
     color: var(--bronce);
 }
 
-.articulos__relac article h4 {
+.articulo__conten h5 {
 
-    margin-top: 0.6em;
+    padding: 1em 1.5em 2em 1.5em;
+    font-size: 1.1em;
+    line-height: 1.4em;
     font-weight: 600;
 }
 
-.articulos__relac article a {
+.articulo__conten a {
 
     position: absolute;
-    bottom: 1em;
+    bottom: 1.5em;
     text-decoration: none;
     background-color: var(--marron);
     border: 2px solid transparent;
-    padding: 0.5em 1.4em;
+    margin-left: 1.5em;
+    padding: 0.5em 2.5em;
     color: var(--blanco);
     transition: .3s;
 }
 
-.articulos__relac article a span {
+.articulo__conten a:hover {
 
-    margin-left: 0.4em;
-}
-
-.articulos__relac article a:hover {
-
-    padding-left: 1.8em;
     border: 2px solid var(--marron);
-    background-color: var(--blanco);
+    padding-left: 2.8em;
+    background-color: transparent;
     color: var(--marron);
 }
 
-/*MAIN POLITICAS*/
+.articulos__nav {
 
-.main__politicas {
-
-    background-color: var(--blanco);
-}
-
-.body__articulo--politicas {
-
-    background-color: var(--blanco-perla);
-}
-
-.header__articulo--politicas {
-
-    position: relative;
-}
-
-.titulo__articulo--politicas {
-
-    bottom: 0;
-    width: 100%;
-    max-width: none;
-    padding: 1.4em 2em;
-    text-align: center;
-    margin: 2.5em 0 0 0;
-}
-
-#h2Politic {
-
-    font-size: 1.6em;
-}
-
-ul {
-
-    padding-left: 1em;
-}
-
-ul li {
-
-    color: var(--bronce);
-    line-height: 1.4em;
-}
-
-.lista__tratam, .lista__datos {
-
-    padding: 0;
-}
-
-.lista__tratam li {
-
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
     list-style: none;
-    color: var(--gris-oscuro);
 }
 
-.lista__tratam li::before {
+.articulos__nav li {
 
-    content: "=";
-    position: relative;
-    top: 0.1em;
-    color: var(--marron);
-    font-size: 1.6em;
-    margin-right: 0.3em;
+    margin: 0 0.4em;
+    border: 2px solid transparent;
+    padding-bottom: 0.2em;
+    color: var(--gris);
+    cursor: pointer;
+    transition: .3s;
 }
 
-.lista__datos li{ 
+.articulos__nav span {
 
-    list-style: none;
-    color: var(--gris-oscuro);
+    color: var(--gris);
 }
 
-.lista__datos li span {
+.articulos__nav li:hover, .articulos__nav li.navActivo {
 
-    color: var(--marron);
-    font-weight: 600;
-}
-
-.lista__datos li a {
-
-    text-decoration: none;
-    color: var(--gris-oscuro);
+    border-bottom: 2px solid var(--blanco);
+    color: var(--blanco);
 }
 
 /*FOOTER*/
@@ -765,8 +734,16 @@ footer {
     color: var(--gris);
 }
 
+@media screen and (min-width: 768px) {
+
+    .masArticulos__conten {
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }  
+}
+
 @media screen and (min-width: 992px) {
-    
     
     .linksMenu__mobile {
 
@@ -933,124 +910,200 @@ footer {
         gap: 0 1.2em;
     }
 
-    /*MAIN ARTICULO*/
+    /*MAIN HEADER*/
 
-    main {
+    .header__conten {
 
-        padding-top: 4.6em;
+        padding: 3em 0 0 0;
     }
 
-    .header__articulo img {
+    .header__fondo {
 
-        width: 65%;
-        display: block;
-        margin: 0 auto;
+        height: 25em;
     }
 
-    .titulo__articulo {
+    .header__conten h2 {
 
-        position: absolute;
-        bottom: 4em;
-        left: 0;
-        width: 48em;
-        max-width: none;
-        padding: 1.6em 2em 1.6em 10.8em;
-    }
-
-    .titulo__articulo time {
-        
-        font-size: 0.9em;
-    }
-
-    .titulo__articulo h2 {
-
-        margin-top: 0.5em;
-        font-size: 1.7em;
-    }
-
-    .volverBlog__desktop {
-
-        display: inline-block;
-        position: relative;
-        bottom: 23em;
-        font-size: 0.9em;
-        left: 5em;
-    }
-
-    .body__articulo {
-
-        padding: 2em 1.4em;
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .refer__articulo {
-
-        background-color: var(--bronce-op-10);
-        border-top: 4px solid var(--bronce-claro);
-    }
-
-    .refer__articulo p {
-
-        font-size: 0.9em;
-    }
-
-    .refer__link {
-
-        font-size: 0.940em;
-    }
-
-    .link__volverBlog {
-
-        margin: 3.2em auto 0 auto;
-    }
-
-    .otros__articulo {
-
-        margin-top: 3.8em;
-        background: url(../../assets/articulos-blog/fondo-articulos.webp) no-repeat center;
-        background-size: cover;
-        padding: 4em 2.4em 4.6em 2.4em;
-    }
-
-    .otros__articulo h3 {
-
+        bottom: 2.020em;
+        left: 5.6em;
+        transform: translateX(0);
+        font-size: 2.5em;
         text-align: left;
-        margin: 2em 0 1.4em 4%;
-        font-size: 1.850em;
     }
 
-    .articulos__relac {
+    .header__conten h2::after {
 
-        flex-direction: row;
+        font-size: 1.7em;
+        bottom: -1.2em;
+    }
+
+    .header__refran {
+
+        position: relative;
+        display: flex;
         justify-content: center;
     }
 
-    .articulos__relac article {
+    .header__refran > span {
 
-        margin: 0.9em 1em;
-        width: 22em;
-        height: 18em;
-        padding: 2.4em 2.7em 1.9em 2.7em;
+        width: 8em;
+        height: 0.040em;
+        margin-top: 0.8em;
+        background-color: var(--bronce);
     }
 
-    /*MAIN POLITICAS*/
+    .header__refran h3 {
 
-    .titulo__articulo--politicas {
+        font-weight: 300;
+        margin: 0 1em;
+    }
+
+    .header__refran h3 span {
+
+        font-family: var(--antiqua);
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    /*NOTICIA DESTACADA*/
+
+    .noticiaDestac {
+
+        padding: 4em 0;
+        background-color: var(--gris-claro);
+    }
+
+    .noticiaDestac__conten {
+
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        max-width: 82em;
+        margin: 0 auto;
+    }
+
+    .noticiaDestac__conten img {
+
+        width: 60%;
+        margin-left: 21em;
+    }
+
+    .conten__caja {
+
+        order: 0;
+        position: absolute;
+        left: 4em;
+        bottom: 1em;
+    }
+
+    .caja__texto {
+
+        width: 94%;
+        max-width: 34em;
+        padding: 2em 3em;
+        margin: 0;
+    }
+
+    .caja__texto time {
+
+        font-size: 0.9em;
+    }
+
+    .caja__texto h4 {
+
+        margin-top: 0.8em;
+        font-size: 1.4em;
+    }
+
+    .conten__caja a {
+
+        margin: 0;
+    }
+
+    /*MAS ARTICULOS*/
+
+    .masArticulos {
+
+        padding: 6em 2.5em;
+    }
+
+    .masArticulos__caja {
+
+        display: flex;
+    }
+
+    .masArticulos__categorias {
+
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 3em 0.6em 0 0;
+    }
+
+    .articulos__categoria {
+
+        padding-left: 1.4em;
+    }
+
+    .articulos__categoria:last-child {
+
+        margin-top: 4.5em;
+        padding-top: 2em;
+        border-top: 1px solid var(--gris);
+    }
+
+    .articulos__categoria h4 {
+
+        margin-bottom: 1em;
+        text-align: left;
+    }
+
+    .categoria__lista {
+
+        display: flex;
+        flex-direction: column;
+        margin: 0 2.8em;
+    }
+
+    .categoria__lista label {
+
+        text-align: left;
+        position: relative;
+        right: 3em;
+        width: 6em;
+    }
+
+    .masArticulos__conten {
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em 1em;
+        margin-top: 0;
+    }
+
+    .articulo__conten {
 
         position: relative;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-        max-width: none;
-        padding: 1.4em 0 0.4em 2em;
-        text-align: right;
-        margin: 3.8em 0 0 0;
+        margin: 0 auto;
+        max-width: 24em;
+        height: 32em;
+        background-color: var(--blanco);
     }
 
-    #h2Politic {
+    .articulo__conten img {
 
-        font-size: 2em;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .articulo__conten time {
+        
+        padding-left: 2em;
+        font-size: 0.850em;
+    }
+
+    .articulo__conten h5 {
+
+        padding: 1em 1.5em 2em 1.5em;
+        font-size: 1.050em;
     }
 
     /*FOOTER*/
@@ -1194,7 +1247,6 @@ footer {
         border-right: 3.2em solid transparent;
     }
 
-    
     .idioma__opciones {
         
         right: 6.6em;
@@ -1203,11 +1255,6 @@ footer {
     .cambio__idioma::after {
         
         right: 13.4em;
-    }
-
-    #h2Politic {
-
-        font-size: 2.2em;
     }
     
     .footer__datos {
@@ -1239,20 +1286,13 @@ footer {
 
         font-size: 2em;
     }
-
 }
 
 @media screen and (min-width: 1400px) {
 
-    .otros__articulo h3 {
+    .masArticulos {
 
-        margin: 2em 0 1.4em 7.4%;
-    }
-
-    .articulos__relac article {
-        
-        margin: 0.9em 1.6em;
-        width: 23.5em;
+        padding: 6em;
     }
 
     .footer__politicas {
