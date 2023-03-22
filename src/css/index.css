@@ -451,6 +451,7 @@ nav {
 .firma {
 
     padding: 6em 1.4em 4em 1.4em;
+    overflow-x: hidden;
     background-color: var(--negro);
 }
 
@@ -1398,12 +1399,12 @@ footer {
 
     header {
 
-        padding: 0 3.4em;
+        padding: 0.2em 3.4em;
     }
     
     header img {
     
-        width: 7.5em;
+        width: 6.3em;
         padding: 0.2em 0 0 0;
     }
 
@@ -1553,11 +1554,11 @@ footer {
     
         margin-top: 1em;
         display: grid;
-        grid-template-columns: repeat(3, 1.6em);
+        grid-template-columns: repeat(3, 1.8em);
         gap: 0 1.2em;
     }
 
-    /*MAIN HEADER SLIDER*/
+    /* MAIN HEADER SLIDER */
 
     .header__slider {
 
@@ -1843,6 +1844,12 @@ footer {
 
         right: 1.4em;
         left: 0;
+    }
+
+    .areas__texto p {
+
+        font-size: 1.1em;
+        text-align: left;
     }
 
     .areas__texto a {
@@ -2211,7 +2218,7 @@ footer {
     .links__sec {
 
         justify-content: flex-end;
-        margin-left: 1.1em;
+        margin-left: 0.4em;
     }
 
     .footer__redes {
@@ -2228,7 +2235,7 @@ footer {
 
         font-size: 1.8em;
         border: 1px solid var(--blanco);
-        padding: 0em 0.640em;
+        padding: 0em 0.720em;
         color: var(--blanco);
         border-radius: 50%;
         text-align: center;
@@ -2301,12 +2308,6 @@ footer {
     .areas__texto {
 
         margin-left: 6em;
-    }
-
-    .areas__texto p {
-
-        font-size: 1.1em;
-        text-align: left;
     }
 
     .areas__tarjetas {
