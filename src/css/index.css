@@ -573,6 +573,62 @@ nav {
     width: 4.2%;
 }
 
+.mapa__tarjetas {
+
+    position: absolute;
+    padding: 0.6em 0;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 28em;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 4px 0 var(--gris-claro);
+    background-color: var(--blanco-perla);
+    transition: .3s;
+}
+
+.mapa__tarjetas.mostrar {
+
+    visibility: visible;
+    opacity: 1;
+}
+
+.mapa__datos {
+
+    display: flex;
+    align-items: baseline;
+    padding: 0 0.6em;
+}
+
+#iconoUbic, #iconoReloj {
+
+    width: 0.750em;
+}
+
+.mapa__datos > p {
+
+    font-size: 0.680em;
+    margin: 0.8em 0 0 0.4em;
+    text-align: left;
+    font-weight: 400;
+}
+
+.mapa__tarjetas h3 {
+
+    padding: 0 1em;
+    font-size: 0.740em;
+    color: var(--bronce);
+    font-weight: 600;
+}
+
+.mapa__tarjetas img {
+
+    width: 100%;
+}
+
 #newYork {
 
     top: 16%;
@@ -1381,6 +1437,11 @@ footer {
         display: block;
         margin: 4em auto 0 auto;
     }
+
+    .mapa__tarjetas {
+
+        width: 60%;
+    }
     
     .areas__tarjetas {
 
@@ -1390,7 +1451,6 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-    
     
     .linksMenu__mobile {
 
@@ -1730,6 +1790,28 @@ footer {
 
         position: absolute;
         width: 4.2%;
+    }
+
+    .mapa__tarjetas {
+
+        width: 34%;
+        max-width: 28em;
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .mapa__datos {
+    
+        display: flex;
+        align-items: baseline;
+        padding: 0 0.6em;
+    }
+    
+    .mapa__datos > p {
+    
+        font-size: 0.680em;
+        margin: 0.8em 0 0 0.4em;
+        width: 15em;
     }
 
     /*AREAS NUMEROS*/
