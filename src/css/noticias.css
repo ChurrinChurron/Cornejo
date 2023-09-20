@@ -1030,6 +1030,7 @@ footer {
     .masArticulos__caja {
 
         display: flex;
+        justify-content: center;
     }
 
     .masArticulos__categorias {

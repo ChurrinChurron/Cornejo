@@ -473,6 +473,11 @@ nav {
     padding: 4em 1.4em;
 }
 
+.equipo__tarjetas {
+
+    display: none;
+}
+
 #imgDefault {
 
     display: none;
@@ -1126,6 +1131,7 @@ footer {
     .equipo__tarjetas {
 
         position: relative;
+        display: block;
     }
 
     .tarjetas {

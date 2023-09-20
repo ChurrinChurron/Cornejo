@@ -2140,6 +2140,7 @@ footer {
         justify-content: center;
         align-items: center;
         background: url(../../assets/inicio/fondo-suscrib.webp) no-repeat right;
+        background-size: cover;
     }
 
     .suscribete h2 {
